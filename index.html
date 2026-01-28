@@ -392,16 +392,27 @@
   const PAGE_SIZE = 13;
   let currentPage = Number(localStorage.getItem("page") || "1");
 
-  function resetView(){
-    document.querySelectorAll(".item").forEach(x => x.classList.remove("active"));
+function resetView(){
+  renderToken++;
+  clearTimeout(debounceTimer);
 
-    viewer.style.display = "none";
-    viewer.setAttribute("src", "about:blank");
+  qText.value = "";
+  statusEl.textContent = "";
 
-    empty.style.display = "flex";
+  currentPage = 1;
+  localStorage.setItem("page", "1");
+  localStorage.removeItem("last_open");
 
-    localStorage.removeItem("last_open");
-  }
+  document.querySelectorAll(".item").forEach(x => x.classList.remove("active"));
+  viewer.style.display = "none";
+  viewer.setAttribute("src", "about:blank");
+
+  empty.style.display = "flex";
+  empty.textContent = "선택된 대화 없음";
+
+  render();
+}
+
 
   function openLog(el){
     document.querySelectorAll(".item").forEach(x=>x.classList.remove("active"));
@@ -501,7 +512,10 @@
   prevBtn.addEventListener("click", () => { currentPage--; render(); });
   nextBtn.addEventListener("click", () => { currentPage++; render(); });
 
-  homeBtn.addEventListener("click", resetView);
+homeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  resetView();
+});
 
   viewer.addEventListener("load", () => {
     try{
