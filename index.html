@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>𝐆𝐎𝐎𝐃𝐇𝐀𝐑𝐓 𝐜𝐡𝐚𝐭𝐥𝐨𝐠 𝐛𝐚𝐜𝐤𝐮𝐩𝐬</title>
-<link rel="icon" type="image/png" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FkYv1X%2FdJMcaivk8wy%2FAAAAAAAAAAAAAAAAAAAAAHVC_PvLpUtzKgPBafHLF_GI_TnULjumceRJ_bIDCY-l%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DlXCp4pz0C0ZPwvup%252BFakRH5iGMk%253D">
+
+  <link rel="icon" type="image/png" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FkYv1X%2FdJMcaivk8wy%2FAAAAAAAAAAAAAAAAAAAAAHVC_PvLpUtzKgPBafHLF_GI_TnULjumceRJ_bIDCY-l%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DlXCp4pz0C0ZPwvup%252BFakRH5iGMk%253D">
 
   <style>
     :root{
@@ -13,13 +14,14 @@
       --text:#000000;
       --muted:#7a7a7a;
       --line:#e6e6e6;
---accent:#e2431f;
-  --accent-bg: rgba(226, 67, 31, .12);
-  --accent-border: rgba(226, 67, 31, .28);
-      --shadow: 0 4px 12px rgba(0,0,0,.10);
+
+      --accent:#e2431f;
+      --accent-bg: rgba(226, 67, 31, .12);
+      --accent-border: rgba(226, 67, 31, .28);
 
       --r:12px;
       --rCard:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.10);
     }
 
     *{box-sizing:border-box}
@@ -27,14 +29,14 @@
     body{
       margin:0;
       font-family:"Helvetica","Apple SD Gothic Neo",system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR",sans-serif;
-      background:
-        radial-gradient(900px 520px at 50% -10%, #ffffff 0%, var(--bg) 55%),
-        linear-gradient(#f6f6f6, var(--bg));
+      background: var(--bg);
       color:var(--text);
-      padding:20px;
+      padding:25px;
+      min-height:100vh;
     }
 
     .wrap{max-width:1040px;margin:0 auto}
+
     .card{
       background:var(--card);
       border-radius:var(--rCard);
@@ -50,8 +52,31 @@
       align-items:center;
       gap:10px;
       background:#fff;
+      --topPadY: 12px;
     }
+
+    .logoBtn{
+      border:0;
+      padding:0;
+      margin:0;
+      background:transparent;
+      appearance:none;
+      -webkit-appearance:none;
+      box-shadow:none;
+      outline:none;
+      display:flex;
+      align-items:center;
+      cursor:pointer;
+      line-height:0;
+    }
+    .logoBtn:focus,
+    .logoBtn:focus-visible{
+      outline:none;
+      box-shadow:none;
+    }
+
     .logo{width:150px;height:auto;display:block}
+
     .topTitle{
       margin:0;
       font-size:13px;
@@ -60,6 +85,22 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      flex:1 1 auto;
+      min-width:0;
+    }
+
+    .topRight{
+      display:flex;
+      align-items:flex-end;
+      flex:0 0 auto;
+    }
+
+    .topBadge{
+      height:55px;
+      width:auto;
+      display:block;
+      border-radius:6px;
+      transform: translateY(var(--topPadY));
     }
 
     .content{
@@ -176,11 +217,12 @@
       overflow:visible;
       word-break:keep-all;
     }
-.item.active{
-  background: var(--accent-bg);
-  border-color: var(--accent-border);
-}
-.item.active .dot{ background: var(--accent); }
+
+    .item.active{
+      background: var(--accent-bg);
+      border-color: var(--accent-border);
+    }
+    .item.active .dot{ background: var(--accent); }
 
     .pager{
       margin-top:auto;
@@ -206,8 +248,8 @@
     .pbtn:disabled{ opacity:.45; cursor:not-allowed; background:#fff; }
 
     .pnum{
-      border:1px solid var(--line);
-      background:#fff;
+      border:0;
+      background:#f3f3f3;
       border-radius:12px;
       padding:7px 12px;
       font-size:12px;
@@ -215,7 +257,7 @@
       text-align:center;
       color:#444;
       user-select:none;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
+      box-shadow:none;
     }
 
     .right{
@@ -226,17 +268,17 @@
     }
     @media (max-width:980px){ .right{ min-height:60vh; } }
 
-    .viewerTop{
-      padding:10px 12px;
-      border-bottom:1px solid var(--line);
-      background:#fff;
-      font-weight:800;
-      font-size:13px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
+    /* ✅ empty: 항상 중앙정렬 유지 */
+    .empty{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
     }
-    .empty{ padding:18px; color:var(--muted); font-size:14px }
 
     iframe{
       width:100%;
@@ -253,12 +295,24 @@
   <div class="wrap">
     <div class="card">
       <div class="top">
-        <img
-          class="logo"
-          src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbwTeCD%2FdJMcahJ09Qz%2FAAAAAAAAAAAAAAAAAAAAAGy7p7jHLsGmg6xN8d6YLsn9Xn5LgcqlHxSzEiEUAokM%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3D2afMa%252FJkC6gLEKx7v5JJe5qnCSU%253D"
-          alt="GOODHART logo"
-        />
+        <!-- ✅ 로고 클릭하면 초기화 -->
+        <button class="logoBtn" id="homeBtn" type="button" aria-label="처음 화면으로">
+          <img
+            class="logo"
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbwTeCD%2FdJMcahJ09Qz%2FAAAAAAAAAAAAAAAAAAAAAGy7p7jHLsGmg6xN8d6YLsn9Xn5LgcqlHxSzEiEUAokM%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3D2afMa%252FJkC6gLEKx7v5JJe5qnCSU%253D"
+            alt="GOODHART logo"
+          />
+        </button>
+
         <div class="topTitle">𝐆𝐎𝐎𝐃𝐇𝐀𝐑𝐓 𝐜𝐡𝐚𝐭𝐥𝐨𝐠 𝐛𝐚𝐜𝐤𝐮𝐩𝐬</div>
+
+        <div class="topRight">
+          <img
+            class="topBadge"
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdyJt8k%2FdJMcabXjUar%2FAAAAAAAAAAAAAAAAAAAAANZ4JkI2rLtAnOtX4HBUDITd972B5_SCX3rn1_9p7mmx%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DLpupVZOcX0XVUevwXFt20nA31G0%253D"
+            alt="badge"
+          />
+        </div>
       </div>
 
       <div class="content">
@@ -271,6 +325,7 @@
             <div id="count">0 files</div>
             <div id="status"></div>
           </div>
+
           <div id="list" class="menu"></div>
 
           <div class="pager">
@@ -281,9 +336,8 @@
         </aside>
 
         <main class="right">
-          <div class="viewerTop" id="title">선택된 대화 없음</div>
-          <div id="empty" class="empty">왼쪽에서 자세히 보고 싶은 대화를 선택하세요.</div>
-          <iframe id="viewer" style="display:none;"></iframe>
+          <div id="empty" class="empty">선택된 대화 없음</div>
+          <iframe id="viewer" src="about:blank" style="display:none;"></iframe>
         </main>
       </div>
     </div>
@@ -321,7 +375,6 @@
 
   const list = document.getElementById("list");
   const viewer = document.getElementById("viewer");
-  const titleEl = document.getElementById("title");
   const empty = document.getElementById("empty");
   const qText = document.getElementById("qText");
   const countEl = document.getElementById("count");
@@ -330,6 +383,7 @@
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
   const pnumEl = document.getElementById("pnum");
+  const homeBtn = document.getElementById("homeBtn");
 
   const cache = new Map(); // filename -> lowercased plain text
   let renderToken = 0;
@@ -338,14 +392,24 @@
   const PAGE_SIZE = 13;
   let currentPage = Number(localStorage.getItem("page") || "1");
 
+  function resetView(){
+    document.querySelectorAll(".item").forEach(x => x.classList.remove("active"));
+
+    viewer.style.display = "none";
+    viewer.setAttribute("src", "about:blank");
+
+    empty.style.display = "flex";
+
+    localStorage.removeItem("last_open");
+  }
+
   function openLog(el){
-    [...document.querySelectorAll(".item")].forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".item").forEach(x=>x.classList.remove("active"));
     el.classList.add("active");
 
-    titleEl.textContent = el.dataset.label;
     empty.style.display = "none";
     viewer.style.display = "block";
-    viewer.src = el.dataset.src;
+    viewer.setAttribute("src", el.dataset.src);
 
     localStorage.setItem("last_open", el.dataset.file);
   }
@@ -377,7 +441,7 @@
       btn.dataset.file = it.file;
 
       btn.innerHTML = `<span class="dot"></span><span class="label">${it.label}</span>`;
-      btn.onclick = () => openLog(btn);
+      btn.addEventListener("click", () => openLog(btn));
       list.appendChild(btn);
     });
   }
@@ -419,9 +483,10 @@
     buildList(pageItems);
 
     const last = localStorage.getItem("last_open");
-    if(last){
+    const currentSrcAttr = viewer.getAttribute("src");
+    if(last && (!currentSrcAttr || currentSrcAttr === "about:blank")){
       const target = [...document.querySelectorAll(".item")].find(x => x.dataset.file === last);
-      if(target && !viewer.src) openLog(target);
+      if(target) openLog(target);
     }
 
     localStorage.setItem("page", String(currentPage));
@@ -435,6 +500,8 @@
   qText.addEventListener("input", scheduleRender);
   prevBtn.addEventListener("click", () => { currentPage--; render(); });
   nextBtn.addEventListener("click", () => { currentPage++; render(); });
+
+  homeBtn.addEventListener("click", resetView);
 
   viewer.addEventListener("load", () => {
     try{
