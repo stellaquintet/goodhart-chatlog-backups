@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>250527 첫대화</title>
+  <style>
+    body {
+      font-family: "Helvetica", "Apple SD Gothic Neo", sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .chat-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: flex-end;
+    }
+
+    .message.sent {
+      justify-content: flex-end;
+    }
+
+    .message.received {
+      justify-content: flex-start;
+    }
+
+    .profile-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      vertical-align: middle;
+    }
+    .sent .profile-img {
+      margin-left: 8px;
+    }
+    .received .profile-img {
+      margin-right: 8px;
+    }
+
+    .bubble {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      line-height: 1.4;
+      font-size: 14px;
+      white-space: normal;
+    }
+
+    .bubble img {
+      display: block;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .sent .bubble {
+      background-color: #fce5cd;
+      color: #000;
+      border-bottom-right-radius: 0;
+    }
+
+    .received .bubble {
+      background-color: #e6b8af;
+      color: #000;
+      border-bottom-left-radius: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-container">
+
+    <div class="message sent">
+      <div class="bubble">... (불편한 기색이 역력한 낯이다. 고급 테일러샵에서 맞춘 듯 몸에 딱 맞는 턱시도 차림과 어울리지 않게, 부산스러운 손짓으로 뒷목을 매만지며 눈을 굴리기를 몇 차례. 비로소 재단의 일원들과 눈이 마주치곤 반갑게 손을 흔든다.) 와! 역시 선생님들! 구하러 오셨구나!</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message sent">
+      <div class="bubble">왜지? 구해주세요. 저 지금 얼굴 상태 괜찮을텐데? (답잖게 억지부터 부린다. 그간 꽤 고된 시간을 보낸 모양이다...)</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message received">
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+      <div class="bubble">D계급을? (약간은 놀림조가, 약간은 순수한 의문이 담긴 질문을 짧게 뱉는다.)</div>
+    </div>
+
+    <div class="message sent">
+      <div class="bubble">네, 교관님. (태연하고 뻔뻔하게 답하곤 제 턱 아래에 양 손을 받쳐보인다.) 저처럼 말 잘 듣고 보기도 좋은 개새끼 찾기 힘드실 걸요. 더군다나 지금은 연구 가치까지 생겼고.</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message received">
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+      <div class="bubble">(D계급 또한 재단의 자산이니. 아마 꼭 희생해야 하는 인원을 빼고는 모두 데리고 나가려고들 하겠지. 그런 생각을 하며 제 턱을 만지작거린다.) 나한테는 그런 말 해봤자 크게 도와줄 수 있는 것이 없는데. 그런 자기 어필은 저기 연구원이랑 무력대원들한테 하는 것이 더 영양가 있을걸... (그러니까, 정말 쓸모없는 이의 등장이다.)</div>
+    </div>
+
+    <div class="message sent">
+      <div class="bubble">저도 알아요. 이미 그쪽분들한테도 한껏 어필해뒀고. (개의치 않는다는 양 웃는다.) 그래도 예쁨받아서 나쁠 거 없잖아요? 어차피 이 안에선 남아도는게 시간이고. 마침 제가 좋아하는 교관님도 이렇게 짠, 나타나셨으니 제가 교관님께 치대는 것도 당연한 수순 아니겠어요? (논리는 그럴싸하다. 과연?)</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message received">
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+      <div class="bubble">(몇 개월 되지도 않았지만. 입에 꿀을 바르고 말하는 듯한 로완의 말이 익숙하다는 듯 헛웃음을 흘린다. 어림도 없지. 라고 말하는 듯.) 그렇게 말해서 누구누구 넘어오긴 했나? 경고 좀 해주게. 7770번 입에 침도 안 바르고 거짓말하니까 유의 좀 하라고.</div>
+    </div>
+
+    <div class="message sent">
+      <div class="bubble">진심이면 받아주시게요? (어차피, 지루한 루틴같은 하루를 환기해줄 쌍방 유희같은 거라 여겼다. 그러다 진짜로 넘어오면 이득인 거고. 살살 눈웃음치는 낯짝은 여전하다.) 교관님은 어떤 타입이 취향이신데요?</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message received">
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+      <div class="bubble">말 잘 듣고. 얌전하고. 겸손한 타입. (눈을 가늘게 흘겨보인다. 그러나 마주 농조 가득한 투다.) 진심으로 해본 적은 있고? 재단에 들어오기 전도 포함해서 말이야.</div>
+    </div>
+
+    <div class="message sent">
+      <div class="bubble">딱 저네요. (아니다. 적어도 마지막은 절대로. 뻔뻔하게 싱글거리는 낯짝으로 이어 대답한다.) 다른 사람 기준에선 어떨지 몰라도 전 저 나름대로 항상 진심이었어요. 사랑하는 사람한테 100% 솔직할 수 있는 인물이 얼마나 될까 싶은데.</div>
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img">
+    </div>
+
+    <div class="message received">
+      <img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+      <div class="bubble">완전히 반대로 알고 있는데. (따라오라는 듯 가볍게 손짓한다. 어차피 이렇게 된 거 술이나 마셔야겠다는 생각이 있었고, D계급이니 적어도 눈에 띄는 곳에 두어야겠다는 생각도 있었기에.) 네 진심은 며칠이 최대인데?</div>
+    </div>
+
+  </div>
+
+  <!-- ✅ 프로필 이미지 링크 일괄 교체 -->
+  <script>
+    const SENT_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcMQc9J%2FdJMcafk7hYP%2FAAAAAAAAAAAAAAAAAAAAAKUuQgNDcTXGo4g922l6kRI-qTUVSYwky8U3mAFjc5JT%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DCRf8tXqC3lGkZubcTGNgwojpfgA%253D";
+
+    const RECEIVED_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FTIBwS%2FdJMcagRR2DN%2FAAAAAAAAAAAAAAAAAAAAAA7KY-0AkTICuK1DRfzP0Jm_wDyd5b4lifSo_nLvGuZp%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DMHqZf8meycN3JlVN%252F%252F3QpxieBoQ%253D";
+
+    document.querySelectorAll(".message.sent .profile-img").forEach(img => {
+      img.src = SENT_AVATAR;
+    });
+
+    document.querySelectorAll(".message.received .profile-img").forEach(img => {
+      img.src = RECEIVED_AVATAR;
+    });
+  </script>
+</body>
+</html>

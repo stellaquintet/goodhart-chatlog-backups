@@ -1,0 +1,411 @@
+﻿
+            <!DOCTYPE html>
+            <html lang="ko">
+            <head>
+              <meta charset="UTF-8">
+              <title>250805 잡담</title>
+              <style>
+                body {
+                  font-family: "Helvetica", "Apple SD Gothic Neo", sans-serif;
+                  background-color: #f3f3f3;
+                  margin: 0;
+                  padding: 20px;
+                }
+
+                .chat-container {
+                  max-width: 500px;
+                  margin: auto;
+                  background-color: #fff;
+                  border-radius: 10px;
+                  padding: 15px;
+                  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                }
+
+                .message {
+                  display: flex;
+                  margin-bottom: 12px;
+                  align-items: flex-end;
+                }
+
+                .message.sent {
+                  justify-content: flex-end;
+                }
+
+                .message.received {
+                  justify-content: flex-start;
+                }
+
+                .profile-img {
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+                  vertical-align: middle;
+                }
+                .sent .profile-img {
+                  margin-left: 8px;
+                }
+                .received .profile-img {
+                  margin-right: 8px;
+                }
+
+                .bubble {
+                  max-width: 70%;
+                  padding: 10px 14px;
+                  border-radius: 18px;
+                  line-height: 1.4;
+                  font-size: 14px;
+                  white-space: normal;
+                }
+
+                .bubble img {
+                  display: block;
+                  padding: 0;
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                  max-width: 100%;
+                  border-radius: 10px;
+                }
+
+                .sent .bubble {
+                  background-color:#e6b8af;
+                  color: #000;
+                  border-bottom-right-radius: 0;
+                }
+
+                .received .bubble {
+                  background-color:#fce5cd;
+                  color: #000;
+                  border-bottom-left-radius: 0;
+                }
+
+                .message.dice .bubble { background-color:#e6e6e6; }
+              </style>
+            </head>
+            <body>
+              <div class="chat-container">
+                
+                  <div class="message sent">
+                    <div class="bubble">숙소가서 울듯. (속마음으로 말해야할 것을 뱉어버렸다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">에궁, 그래도 울진 마세요. (뻔뻔하게 위로한다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">…(우는 주방장 가리킨다;)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(아. 나한테 하는 말인 줄 알고;) ... 왜 울어요 저 사람?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">싸이코가 도시락을 앞에서 엎고 갔대…</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(인성 실화야?) 그에 비하면 난 진짜 양반인데 왜 맛있는 거 안 주지...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내가 볼땐 네가 좀 질린거 아니야? 좀 다른 매력으로 승부해봐. 싸가지 드라마 남주상 같은거.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">오?<br>(진짜 좀 나아지긴 해서 황당하다) ...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">오는 무슨… 오. 진짜 알 수가 없다. 그치.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그냥 앞으론 형님이 해주시는 밥 먹을게요. (해준다고 한 적 없다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(내 요리 실력은…)  [다이스]</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">주사위 결과: 20!</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭔 밥이야. 오늘은 양주 기분이야. 양주나 마셔.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님 진짜 그러다 일찍 죽어요.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">양지바른 곳에 묻어줘라.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... (퍽 친다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">[다이스]</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">주사위 결과: 97!</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">? (강한 충격에 삐끗하여 엎어지고는 당신을 올려다본다;)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">………….. (헐… 그냥 살짝 친 건데…) 이게… 나?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...힘에 취해있지 말고 나 좀 일으켜주지? (바닥에 그대로 누워 시체처럼 있었다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님... 제가 존나 &quot;힘&quot;을 가지게 된 것 같은데 어떡하죠...? (미안하단 말 한 마디 없이 옆에 쪼그려 앉았다. 일으켜달라는 말은 가볍게 무시한다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">아니, 힘이고 나발이고 일으켜달라고...새키야... (누워서는 당신의 등짝을 바라보고 있다...)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">하하하... 이제 이 재단은 내가 접수한다... (당신이 바라보면 곧 어깨가 들썩인다. 미친 건가?)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(결국 뒤에서 발로 밀어버린다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">악  [다이스]</div>
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">주사위 결과: 41!</div>
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(엎어지긴 했지만 어딘가 부딪치거나 깨지진 않았다.. 헉헉...) 갑자기 왜 차요?!</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">어른 공경도 모르냐 짜식아? 너 진짜 나한테 교육 한 번 받아볼래?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">.... 무슨 교육이요? (등 벅벅 긁으며 그제서야 당신을 본다... 손 뻗어 일으키고...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">예의교육. 어른께는 어떻게 해야하는가. 이런거. 임마, 너 내가 결혼 일찍 했으면 내 자식 뻘인데. 늙은 사람을 그렇게 풀스윙으로 때리고 하면 쓰냐? (라고 하기엔 이쪽이 더 건강해보이긴... 하다만.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">저 진짜 살살 친 건데... 앙탈이었는데... (억울해보인다.) 근데 방금 하신 말씀 진짜 꼰대 같았어요.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내가 딱히 틀린 말 한건 아니잖아. 말해봐. 내가 틀린 말 했어? (꼰대...맞다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">별로 늙어보이지도 않고 아빠 뻘 같지도 않아서... (칭찬인가?)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(칭찬? 인가? 애매한 표정이 되어서는 자연스럽게 당신의 어깨를 누르고 일어난다.) ... ... 나 좀 젊어보여? (조금 비죽 올라가는 입꼬리를 막을 수가 없다...)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(대체 어느 아빠가 이렇게 철부지란 말인가... 단순하긴...) 네. 그니까 면도 하고 다니세요.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">젊어 보이니까 수염 길러도 어려 보이겠네. (뭔가 만족한듯 고개 끄덕였다.) 고맙다.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(말이 되나, 하는 눈) 수염을 기르는데 어떻게 어려 보여요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">너무 어려보이면 곤란하잖아. 그러니까 길러서 그걸 중화 시키는거야. (제 턱을 만지작 거린다...) 너도 나중에 한 번 길러봐. 남자라면 한 번쯤은 길러봐야지.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">너무 어려보이는 건 걱정 안 하셔도 될 것 같아요. (진지하게 보고는... 마지막 말에 표정을 썩힌다...) 무슨 그런 시대착오적인 발언을...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">이왕 나는거 한 번쯤 시도해도 나쁘지 않다는 소리야. (잠시 당신의 얼굴을 뻔히 쳐다본다.) ...음, 취소. 너는 없는 것이 더 이쁘장하겠다.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(방금 무슨 상상을... 무어라 따지려다 말았다.) 저 예뻐요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">잘생긴 것보다는 이쁜 편이긴 하지. 따지고 보자면... (진지하게 분석하는 톤)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">....................... (어쩐지 부끄러워한다. 시선을 피하며...)(??????????)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">??????????????<br>(그 반응에 아무런 말도 못하고 뻔히 보고있다;)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님께서 절 그런 시선으로 바라보고 계셨을 줄은 몰랐어요... (주먹 쥐고 꽃받침)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(나는 참았는가.)  [1125]</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">SCP-1125 (정답 주사위)가 굴려졌다.<br>이 결과는 무조건적으로 이행해야 한다.<br>결과: 아니오</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(꽃받침을 탁 쳐서 무너뜨린다;) 하여간 칭찬을 해주면 안돼...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(헉... 정말 이게 다인가?) ... 뭐지, 예전 같았으면 주먹질이 날아왔어야 맞는데...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">그걸 원했구나. 알겠다. (뒷통수를 탁 갈긴다. 하지만 역시, 술에 취했을 때보다는 약하다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">............. 역시 저 좋아하시는구나. (애매한 타격감에 뒷머리를 문지르며 결론내린다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">조금만 기다려다오. 내가 멀쩡한 정신에는 나보다 20살 어린 놈을 진심으로 칠수가 없다... (좀 애교로 보이기까지 했다; 술이 문제가 아니라, 술이 정답이었던 것 같다.) 마시고 올게 내가...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(와... 지금이다. 지금 나대둬야 해. 본능으로 알았다.) 하긴, 맨 정신으로 저같이 완벽한 사람한테 고백한다는 게 쉬운 일은 아니죠. 이해해요. 그래도 자신감을 가지시고...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">… … … (어디까지 하나 들어보자. 하다가 결국 참지 못하고…. 주먹질은 못했지만, 다리를 걸어 엎어지게 했다. 참을성이 완전 돌아오지는 않은듯)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... (보기 좋게 엎어졌다. 이전처럼 코피라도 나면 곤란하니 넘어짐과 동시에 얼굴을 사수한다;) 커헉...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(로완 하트는 얼굴을 잘 사수했나?) 너는 다 좋은데 그 입이 문제야…</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(사수... 했을까?)  [1125]</div>
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">SCP-1125 (정답 주사위)가 굴려졌다.<br>이 결과는 무조건적으로 이행해야 한다.<br>결과: 아마도?</div>
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(얼굴은 사수했는데 대신 팔꿈치가 까졌다...) 아, 진짜, 성격 괴팍하기는...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내 성격 더러운거 모르는 8기지 사람이 또 있었네 이거... 그래도 이 정도면 아주 나이스한 편 아니냐?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">......... (아프긴 한데.) 솔직히 이번엔 좀 오래 참긴 하신 것 같아요. (순순히 인정한다...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내가 참은 건 줄 알면, 사태 돌아오기 전에 너도 맷집 좀 길러와. 칠때마다 죄책감 드니까. (이건 뻥이긴 하다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">저 사실 마조히스트라서 죄책감 안 느끼셔도 돼요. (태연하게 말했다. 당연히 구라다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">갑자기 때리기 싫어졌어...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">왜요? 더 때려주세요.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">보완 요원 부를거에요.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">셋이서는 좀 그런데...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(하) 나는 관전만 할게.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아, 그런 취향?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(못 참고 쳤다;) [다이스]</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">주사위 결과: 19!</div>
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(하필 또 19야?) (별로 아프지는 않았고, 연기나 하기로 한다.) 꺄아앙.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(황당하다...)  [다이스] (정도로 밀치고 갈 길을 갔다...)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received dice">
+                    <span class="profile-blank" aria-hidden="true"></span><div class="bubble">주사위 결과: 88!</div>
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(아;;;;;) (가냘프게 쓰러졌다.......가 씩씩하게 일어선다.) 들어가십쇼~! (싹싹)</div>
+                  </div>
+                
+              </div>
+  <!-- ✅ 프로필 이미지 링크 일괄 교체 -->
+  <script>
+    const SENT_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbfks9u%2FdJMcabbWvYY%2FAAAAAAAAAAAAAAAAAAAAAM7VpT3HjtZO24b5C2AGAWuN5aLHfAPQUBifKXAcUzZg%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3D3PznUT4eJOEbosjqYOGHh4QVG9g%253D";
+
+    const RECEIVED_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbCkHTS%2FdJMcaaqzJ4V%2FAAAAAAAAAAAAAAAAAAAAAMV2SxlhbkD-pBdnXuh2zxhysyVuFmnfBz32I3kqrtAi%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3Dpl84UXxNsyugVOFz3m7v%252FXcVRTg%253D";
+
+    document.querySelectorAll(".message.sent .profile-img").forEach(img => {
+      img.src = SENT_AVATAR;
+    });
+
+    document.querySelectorAll(".message.received .profile-img").forEach(img => {
+      img.src = RECEIVED_AVATAR;
+    });
+  </script>
+            </body>
+            </html>

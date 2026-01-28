@@ -1,0 +1,1025 @@
+﻿
+            <!DOCTYPE html>
+            <html lang="ko">
+            <head>
+              <meta charset="UTF-8">
+              <title>250923 영화</title>
+              <style>
+                body {
+                  font-family: "Helvetica", "Apple SD Gothic Neo", sans-serif;
+                  background-color: #f3f3f3;
+                  margin: 0;
+                  padding: 20px;
+                }
+
+                .chat-container {
+                  max-width: 500px;
+                  margin: auto;
+                  background-color: #fff;
+                  border-radius: 10px;
+                  padding: 15px;
+                  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                }
+
+                .message {
+                  display: flex;
+                  margin-bottom: 12px;
+                  align-items: flex-end;
+                }
+
+                .message.sent {
+                  justify-content: flex-end;
+                }
+
+                .message.received {
+                  justify-content: flex-start;
+                }
+
+                .profile-img {
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+                  vertical-align: middle;
+                }
+                .sent .profile-img {
+                  margin-left: 8px;
+                }
+                .received .profile-img {
+                  margin-right: 8px;
+                }
+
+                .bubble {
+                  max-width: 70%;
+                  padding: 10px 14px;
+                  border-radius: 18px;
+                  line-height: 1.4;
+                  font-size: 14px;
+                  white-space: normal;
+                }
+
+                .bubble img {
+                  display: block;
+                  padding: 0;
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                  max-width: 100%;
+                  border-radius: 10px;
+                }
+
+                .sent .bubble {
+                  background-color:#e6b8af;
+                  color: #000;
+                  border-bottom-right-radius: 0;
+                }
+
+                .received .bubble {
+                  background-color:#fce5cd;
+                  color: #000;
+                  border-bottom-left-radius: 0;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="chat-container">
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(그간 피부관리에 소홀했던 만큼... n시간동안 열심히 셀프케어를 마치고 행복한 얼굴로 에스테틱 코너에서 걸어 나온다. 수분을 가득 머금은 피부에서 광채가 난다. 흡족...)</div>
+                  </div>
+
+                  <div class="message sent">
+                    <div class="bubble">누가 핸드폰 조명 켜고 다니니~ 전기 아껴라~ (술병 들고 마시며 가다가, 일부러 띄워주고 간다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(옆으로 쇽 따라 붙는다.) 어때요? 좀 괜찮아보여요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">대체 몇 시간동안 그 안에 있던거야?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">얼마 안 있었는데요? 한 5시간?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">그정도면 그냥 녹았겠는데. (볼 땡겨본다. 탱탱해졌는가?)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(완전. 촉촉하고 탱글하다.) 아! 지금 만지시면 어떡해요! (투닥투닥)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭐 시멘트공사도 아니고 만지면 자국이라도 남냐? (한 번 더 땡긴다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">…….. (동공 수축시키고 싸늘하게 바라본다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">… 뭘 봐? (멀뚱하게 본다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(눈에 힘 푼다. 안 먹히는군…) 하여간 형님도 특이하십니다. 모처럼 얼굴 주사위 6인데 별로 감흥도 없으시고…</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭘 새삼스럽게... 말했잖아. 나는 섹시한 사람이 취향이라고... 아니면 저기. (지나가는 리조트 직원을 가리킨다.) 저 사람한테 써먹어 보는 건 어때.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">저 정도면 나름 섹시한 편이라는 말도 한 스무 번 정도 한 것 같은데? (남자의 악마 표정) (오기라도 생긴 모양인지 뒷말은 무시했다. 물론 흘긋 쳐다보긴 했지만… 취향이 아닌 듯하다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">섹시의 기준을 다시 정립할 필요가 있군... (품 안에 넣어둔 플라스크를 한 모금 꺼내 마시며 당신을 위아래로 훑는다.) 난 무거운 타입이 섹시하다고 생각해.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님이 진짜 남자 맛을 못 봐서 그래.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭔 맛인데 그게;</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">궁금해요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내가 방금 그렇게 말했다고 모른다는 소리가 아니야.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(왜 알지? 같은 얼굴로 본다. 공허해지는 동공…) 루크 굿맨이 남자 맛을 안다고?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">아니 제발 이상한 소리 좀 그만해. (입을 틀어 막는다;) 내 나이가 몇 인데.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">뒤로 했어요? …</div>
+                  </div>
+
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">… 아니다. 말 하지 마세요. 말하지 말라 했다 내가.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">… (진짜 이게 무슨 질문이지. 천장 본다…) 제게도 한 때는 있었습니다…</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(미친 사람 보는 눈…)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">왜 그런 일이 생겼을까요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">한 번 대주면 내가 하게 해준다길래…</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(왜 이런것까지 말해주냐는 눈)(오만상)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(네가 물어봤잖아....) (미간 쪽 검지로 꾹 눌러서 인상 피게한다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(바로 편다. 언제 인상썼냐는듯…) 근데 별로셨다고?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(이번에는 이쪽이 미간을 구긴다.) ...굳이 거길로?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">진짜 남자 맛 못 본 거 맞네… (히죽)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(제 앞에 있는 사람이 로맨스 스캠범이라는 사실을 간만에 떠올린다. 눈을 가늘게 흘겼다.) 그거 안봐도 딱히 사는데에는 지장 없더만.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아니 뭐, 그야 그렇겠지만. 인생의 절반 손해보실까봐 한 말이죠.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">인생의 절반 손해봤어~ 이미 손해 오지게 봤어~ 다른 걸로 메꿔야겠다. 술 좀 있냐?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">술을 왜 저한테 찾으세요? 여기 와인셀러도 있고 그런 거 같더만. (이전까지 퍽 장난스러웠던 낯이 사뭇 진지해진다.) ... 아직 안좋아요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">가기 귀찮아서. 없으면 내가 숨겨둔 술 마셔야하잖아. (못된 투로 말하며 장난스럽게 웃는다.) …좀… 많이 필요해서. 평소보다 약간. 많이.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">은근슬쩍 심부름 시키지 마시고 차라리 같이 가요. (말려봐야 듣지도 않을 양반이라는 거 안다. 무작정 잡아 끌었다.) 얼마나 많이?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(순순히 끌려간다.) 같이 마셔주게? 음. (우중충한 하늘을 바라본다. 정신이 점점 멀끔해지는 기분에 한숨이 기어나왔다.) 일단 술 세 병 비우고 시작해야할 것같은데… 로완, 네 주량이 어떻게 되지?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">분위기 맞출 만큼은 먹어요. (원체 술 마실 일이 많았으니 꽤 강한 편이었다. 정원 지하통로를 거쳐 와인셀러로 향한다.) 그래도 당장 안 죽은게 어디야, 그쵸? 저도 목 제대로 붙어있으니까... 도박 반쯤은 성공하셨네.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(어차피 혼자 주구장창 마실테니, 옆에만 있어줘도 충분하긴 했다.) …나 역배 맞춘거 오랜만이야. (그리고는 낄낄거리며 웃어보였다. 당신에게 어깨동무를 턱 걸친다.) 뭐, 당장 한 달 뒤는 모르겠지만. 네 말대로 지금은 살아있으니까. 어때, 내 승률 나쁘지 않지?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그래도 너무 무모하긴 했어요. (가까워진 거리감에 머리를 툭 기댄다. 꽤 애교있는 몸짓처럼 보일 수도 있겠다.) 운이라고 보면 운이겠지만요. 경주마 입장도 한번 들어보실래?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나한테 화내야 할 입장 아니야? 멋대로 네 미래를… (셀러에 도착하면 자연스럽게 아무거나 한 병을 한 손으로 빼서 코르크를 엄지로 밀어 따버린다.) 요구한건데. 내가. (먼저 마실래? 슬쩍 내밀었다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(새삼 힘 존나 세구나... 라는 감상.) 여기서 먹어요? 적어도 자리는 좀 옮기지. (그렇게 타박하면서도 싫지는 않은 모양이었다. 나무 박스 위에 아무렇게나 걸터앉는다. 미세하게 먼지가 날린다.) 룩 형님 아니었으면 몸 멀쩡하게 못 나왔을 거예요, 나는.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(당신이 술을 받지 않으면, 그냥 이쪽이 병나발을 불었다. 몇 번의 울컥임으로 1/3이 줄어든다.) …다 들고가기 무거워서. 여기서 좀 마시고 가려고. (자연스럽게 당신의 옆에 앉았다.) 왜. 자해라도 할 셈이었어?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">굳이 그런 거 안해도 충분히 위태롭지 않았나? (붕괴하는 기지를 빠져나오기 직전, 발걸음을 붙들었던 것들을 떠올렸다. 어쩌면 지금도 꿈속에 나타나 정신을 어지럽히는 잔상들을.) 좀 포기하고 싶었거든요. 형님이 나한테 건 판돈 떠올리기 전까지는.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(그 기억이 또렷한 것은 마찬가지다. 게다가 지우기 위해 쓰던 수단 또한 지금은 기능을 못하니, 당신의 말에 한 번 더 각인이 된 듯 저도 모르게 손아귀에 힘이 들어갔다.) 기껏 말을 골랐더니... (마지막즈음엔 부러 당신의 말을 무시했다. 책임전가를 멈추고 싶지 않았다. 이기적이게도.) 계속 판돈 다 걸지 말라고나 하고 말이야. 난 이미 올인해버렸는데. (한 병 클리어.) 도움이 좀 됐나?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(가만 듣다가 나즈막히 웃었다. 호흡이 길다. 마땅한 대답은 없었고.) 남는 게 뭐예요? 고작 성취감?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">네가 남잖아.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">...................<br>나 사기꾼인 거 알죠?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">난 불리한거 빼고 넣고 하는거 성미에 안맞아. 일부를 지운 로완 하트를 말한 게 아니야.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(헛웃음을 삼키며 시선을 옆으로 굴린다. 짧은 침묵이 흘렀다.) 내가 형님 배신때리고 도망가서 영영 연락 두절되면 어쩌려고요. 그럼 나도 안 남을텐데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">그것 또한 너인거지. (두 병을 꺼낸다. 코르크를 뽑고 한 병을 아예 안겨준다.) 살아갈거잖아. 원래 네가 원하던 것처럼.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그니까, 원점으로 돌아가서, 그럼 형님한텐 뭐가 남는데. 그걸로 만족이 돼요? (병을 받아들긴 했으나 마시진 않았다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">? 내가 너를 못 찾을거라는 자신감은 어디서 나오는거야? (너무 당연하다는 듯 바라본다.) 그런갑다 한다고 했지 영영 연 끊게 해주겠다는 말은 한 적 없는데.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">예? (이 대목에서는 결국 눈을 마주해버린다. 속절없이 표정이 풀린다.) 루크 굿맨이 고작 D계급 애새끼 하나 찾겠다고 스토킹을 불사하시겠다고?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">D계급 애새끼 아니고 로완 하트. 내 판돈. (이쪽은 낯이 여전하다. 한 병을 그대로 또 비운다.) 왜. 못할 것 같아? (히죽 입꼬리를 올린다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">하하, 하... (미간을 덮어 문지른다. 손이 내려간 뒤의 얼굴은 한껏 유쾌해진 뒤다. 제 병을 무작정 마주 갖다댔다. 어울리지 않게 맑은 소리가 울린다.) 나 집착하는 타입은 별론데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(비어버린 병을 가만히 보다가 옆에 내려둔다. 벌써 공병이 둘이나 되었다.) 나도. 그러니까 알아서 행동 잘 해. (잔뜩 장난스러운 투다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">거 참, 우리 형님 무서워서 도망은 물 건너 갔네.............. (단단한 어깨에 머리를 냅다 기댄다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">혹시 궁금하면 나중에 한 번 해봐. 나도 간만에 술래잡기 좀 하자. (튄다는 소리에 상상했는지, 퉁명스러운 투로 말하며 살짝 어깨 흔들어 퉁겨본다;)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(어깨가 밀리면 밀리는 대로, 얌전히 흔들리면서 낄낄거렸다.) &#39;간만에&#39; 같은 불안한 워딩 쓰지 마시죠. 도망 안 갈 거니까 걱정 마시고... ... 어차피 지금은 나갈래야 나갈 수도 없잖아요. (제가 손에 들고 있던 병을 기울여 한모금 마시곤 그대로 넘겨주었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(그야 그렇지. 사실 당장 한달 째 되는 날의 생존여부조차 확실하지 않았다. 흔들리던 당신의 머리가 기대지면 그 머리 위에 제 것을 얹었다. 술병을 받아들고 이쪽이 마셔버린다.) 술 세다는 거 다 순 뻥이지? 나 세 병 마시는 동안 한 모금 마시네...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">전 맨정신이고 싶어서요. (이 상태로 웃으면 그 떨림은 온전히 전해진다.) 마시니까 좀 나아요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">가성비가 너무 딸려. (마주 웃었다. 그래도 3병이 연이어 들어가니 숨이 평소처럼 조금은 느릿해진다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">이 기회에 좀 줄이거나 끊으라는 계시? 뭐 그런 거 같은데. 어차피 안 줄이실 거죠.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">약이라도 같이 해야하나? 근데 그건 머리가 너무 아파서. 아~ 누가 같이 마셔주면 좀 재밌을테니까 더 잘 취할 것 같은데~ (부장님 톤)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아, 알겠어요, 알겠다고. (허리를 쿡 찔렀다. 몸을 일으킨다.) 여기선 좀 그렇고~. 몇 개 챙겨서 자리 옮기죠? 얼마나 필요한데요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(그 말에 냉큼 여러 병을 챙긴다. 당신의 품에 5병 정도를 안겨주고, 본인은 양 손에 각 세 병씩 들고간다.) … … …그냥 여기서 지낼까봐. 숙소 못 옮기나?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(한아름 품에 안았다. 이걸 오늘 다 마시겠다고?...) 되도 않는 소리 하지 마시고요. 얼른 가시죠. 형님 방? 제 방?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(하루종일 안고사는 바람에 정확한 주량은 알 수 없었지만, 적어도 이정도는 필요할 것 같았다.) 네 방. 저번엔 내 방 왔었잖아? (그야, D계급은 개인 숙소가 없었으니까.) 방은 좀 마음에 들어? (비척비척 올라간다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">예전에 비해서야 뭐. 거의 호텔방이던데요? (묘한 디퓨저 향이 감도는 5층의 숙소 안으로 들어선다. 비록 가장 작은 평수라지만 고층인 것도, 라운지가 가까운 것도 꽤 마음에 들었다.) 편하게 계세요. (테이블에 술병을 올려두고 잔을 꺼낸다. 이따 영화라도 볼까 싶어 편의점에서 나초를 쟁여오길 잘했지. 그것도 겸사겸사 보울에 담아 세팅한다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭐... D계급들이니까. 기지에선... (실험쥐 신세다. 그 말은 속으로 삼켜냈다.) 나도 고층으로 배정해달라고 할 걸. (자연스럽게 카우치에 길게 기댄다. 잔을 가만히 바라보다가, 조금 웃어버리기도 했다. 필요없지만, 일단은 잔에 나눠서 따르고 나초를 하나 입에 문다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">여기까지 올라와놓고 병나발 부는 건 좀 그렇잖아. 분위기 좀 살리자고요. (말하지 않아도 무슨 생각인지 알겠다는 듯 대꾸하고는 옆에 앉는다. 카우치 대신 바닥에 편하게 주저앉아 제 몫의 잔을 든다.) 둘 다 E계급 된 기념으로?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">술을 분위기 내려고 마시던 게 너무 옛날이라. (잔을 가볍게 부딪친다.) 내 도박이 반쯤 성공한 것을 기념하며. ...E계급이라. 혹시 파견나온 새끼들도 그 말 하든?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">나머지 반이 관건이긴 한데. (장난스레 찡긋하며 가볍게 들이켰다.) 네, 맥박체크 하는데 옆에서 그러던데요. 팔자 펴서 좋겠다고. 기존 D계급 취급보다는 훨씬 낫지 않냐고요. 맞는 말이라 그냥 웃어 넘겼어요. (어디까지나 제 입장이다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...그건 두고봐야 아는거니까. (일단은 그 순간에 모든 것이 끝나지 않은 것에 감사를 느낄 차례였다. 이쪽은 조금 눈치를 보다가, 조금 홀짝인다. 혼자 원샷하기가 좀 그래서.) ...얼굴 어떻게 생겼는데? (당신은 가벼웠겠지만, 이쪽은 아니다.) 그냥 물어보는거야.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">....... 기억 안 나요. (구라다. 구라인 걸 숨기지도 않는 얼굴이다.) 형님은 성질 좀 죽이셔야 돼. (그리곤 원샷했다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나 두 번 물어보는 거 안 좋아해. (가만히 바라본다. 표정 연기를 하는 정성조차 없군.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">대답 안 해드릴 거예요. (뻗댄다. 괜히 싸움걸어봐야 당신 평판에 좋을 리도 없고...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">그럼 하나씩 잡고 패면 돼? (평판을 생각했다면 이지경까지 오지 않았을 것이다. 조금 열이 올라 술을 원샷하고, 다시 한 잔을 가득 따랐다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그럴 시간에 저랑 놀아주세요, 그냥. 언제 죽을 줄 알고. (기어코 그 말을 꺼내고야 만다. 제 빈 잔도 뻔뻔하게 내민다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">... (당신의 잔을 마주 채워주던 손이 멈칫한다. 그대로 잔이 가득 채워지다가, 거의 넘칠듯 말듯한 선에서야 물러섰다.) ...놀아주고 있잖아. 너 아니였으면 걔네 패고 있었어. 아직도.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님이 몸이 근질근질하시고 막, 사디스트시고, 그래서 패는 거면 모르겠는데. 기분 문제면 좀 참아요. (가득 채워진 잔을 빤히 바라본다.) 형님은 버킷리스트 같은 거 있어요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나는 원래 나 욕하는 건 못 참아.  (것보다는, 화풀이 할 대상이 필요했을지도 모른다. 그것을 본인도 잘 아는지 조금 고개를 숙이고 찰랑이는 잔을 만지작거린다.) ...나한테 물어봤자 의미 없는거 알잖아. 너는? (그건 좀 흥미가 간다. 시선을 돌려 바라본다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그래도, 생각 좀 해 봐요. (예상했던 답변이긴 하다.) 저도 여태 별 생각 없었는데, 한달 뒤에 죽을지도 모른다고 생각하니까 영 못 이룬게 많더라고요. 찾아보니까 이런거 리스트로 작성하고 클리어하는게 꽤 시간 때우기 좋다고 해서. 어차피 할 것도 없잖아요? (냅다 협탁에 손을 뻗어 메모지와 펜을 끌어왔다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">여기서 이룰 수 있는 것만 쓰기로? (당장 떠오르는 것이 아무것도 없는데. 미간을 구기고는 손을 뻗어 메모지와 펜을 하나씩 가져간다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">그냥 생각나는대로? 막막하면 같이 써요. 10개까지만 채워보지 뭐. (손을 뻗어 메모지에 &#39;1. 민트 초콜릿 크림 컵케이크 먹어보기&#39; 라고 쓴다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">엥. 민트랑 초콜릿? (이쪽은 영 생소한지 으엑- 하는 표정을 지어보이다가. 펜을 움직인다.) [ 1. 셀러 술 반 이상 털어버리기.] (그리고 조금 고민하다가...) [2. 부모님께 안부 전화 해보기.]</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">어릴 때 친구가 먹는 걸 봤는데 너무 비주얼이 충격적이라 평생 안 먹겠다고 선언했었거든요. 근데 또 궁금하긴 해서, 죽기 전엔 먹어보려고. (이쪽 역시 짧게 고민하다가, 마찬가지로 2번 항목에 &#39;엄마 병원에 전화 해보기&#39;를 적었다.) 기왕 바다 근처인 거 3번은 수영하기로 적을래요. 같이 가실래? (&#39;3. 날씨 좋은 날 바다수영하기&#39; 까지 적었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나쟈가 만든 음식같을 것 같은데... (생소한 비주얼의 그것들을 떠올린다. 의외로 맛이 괜찮을 수도 있지.) 수영 잘해? <br>[4. 금주 금연... 도전은 해보기.]<br>(그리곤 펜을 두들긴다. 한참을 두들기다가...) <br>[5. 로완 하트 놀아주기.]<br>이것도 쳐주는거지?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">할 줄은 알아요. 잘은 못하지만. 그래도 재밌겠지 않아요? (당신이 쓴 4번 항목을 보곤 저도 모르게 픽 웃는다. 그리곤 제 종이에 &#39;4.하루동안 거짓말 없이 살아보기&#39;를 적는다.) ... 뭐라고 썼길래요? 로완 하트 놀아주ㄱ... (소리내어 읽다가 문득 멈추곤 &#39;5. 루크 굿맨 적적하시지 않게 곁에 있어드리기&#39; 적는다. 연이어 6번에는 &#39;엄청난 미인이랑 개쩌는 XX하기&#39; 따위가 쓰인다...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나쁘지 않지... 한 5년 전에 기지에서 단체로 간 이후에는 안 가본 것 같은데. ... (이어져 써지는 것을 보며 웃다가, 6번을 보고는 고개를 저어낸다.) 여태 한 것으로는 만족이 영 안돼? 그정도로 하면 닳겠다. <br>[6. 인생의 목표 정해보기.]<br>[7. 섹시한 사람 꼬셔보기]<br>[8. 고맙다는 말 3번 이상 들어보기.]<br>내가 여태 해본 것 중에 제일 어려워...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">&#39;개쩌는&#39;이 포인트예요. 여태 경험한 거랑 다른 느낌이었으면 좋겠어... (그리 말하며 쩝. 입맛을 다신다. 무슨 상상을 하는 건지...) 음? 영 쓸 데 없는 것만 적을 줄 알았는데 의외로 실속 있으신데요. (&#39;7. 무지개 보기&#39;, &#39;8. 타투 하기&#39;를 차례로 아래에 채워넣었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">섹스가 거기서 거기지 뭘... 복상사? 그런거? (떠오르는 기지의 누군가...) 나는 의외로 버킷 리스트에 적을만한건 다 하고 있는 상태거든.<br>[9. 물고기 잡아와서 키우기]<br>[10.                                      ]<br>10번은 비워둘래. 혹시 모르잖아.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아니, 그런 거 말고. 진짜 &#39;이걸 위해 여태 살았구나&#39; 싶을 정도로 황홀한 경험 같은 게 있지 않을까요? (헛소리를 하며 마저 채운다. &#39;9. 누군가를 100% 신뢰해보기&#39;. 그리고... 10번은 무어라 끄적거린 뒤 곧바로 종이를 반으로 접어 품 안에 넣는다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">그런 건 보통 몽정할 때나 꾸는 꿈이지. (그리곤 당신이 적은 10번을 보려다가, 순식간에 놓치자 황당한 얼굴로 바라본다.) 뭐라고 썼는데? 보여줘. 같이 공유하고 놀자며? (손을 쑥 밀어넣어 뺏어보려고 한다;)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">형님도 비워두셨잖아요? 이건 클리어하면 알려드릴... 아, (피하는 과정에서 한가득 차 있던 술잔이 엎어진다. 축축...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나는 정말 아직 없어서 안 넣어둔거... 야! (애초에 이런 것을 쓴 것이 너무 오랜만이다. 조금 민망한듯 말하다가, 술을 쏟으면 본능적으로 술잔을 다시 세우고. 젖은 부분을 근처의 타올을 가져와 덮는다.) 아이씨, 술 아깝게... 괜찮아?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(이쪽은 옷이 좀 젖었고, 당신의 메모지 끝이 축축해졌을 것이다. 갑작스런 사고에 눈만 끔뻑거리다가 이내 파하학 웃어버린다.) 아, 진짜 방심할 틈이 없네...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">옷 갈아입고 와. (메모지가 젖는 것은 상관 없었다. 술이 휘발되며 나는 달큰한 냄새에, 미묘하게 미간을 구긴다. 순식간에 당신의 10번은 뇌내에서 잠시 지워진다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">넵. (타이밍 좋게 술이 엎어진 탓에 사수한 종이를 품에서 꺼내며 일어선다. 옷을 갈아입고 돌아오는 데에는 그리 긴 시간이 걸리지 않았다. 헐렁하고 편한 흰색 민소매 티셔츠에 검은 쇼츠 차림. 이렇게 격식없는 옷차림은 아마 처음 보여주는 것일 듯한데...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">이제 내가 편해 죽겠지? (장난스럽게 돌아온 당신의 머리에 헤드락을 걸었다가 놔준다. 그리고 조금 낯선 기분에 가만히 보다가…) 너 진짜 이쁘게 생기긴 했다. 난 저 차림으로도 괜찮게 생긴 놈 처음봤네… (순수하게 감탄 중…) 옆에 앉아. 영화나 보다가 네 방에서 자고 가야겠다.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">으앗, (덕분에 머리가 좀 흐트러졌다. 황당...) 갑자기 뭐예요? 취했어요? (작업멘트치곤 좀 구린데. 덧붙이면서도 옆에 앉는다. 엎은 탓에 비어버린 잔을 다시 채워 홀짝였다. 리모콘도 끌어왔다.) 보고 싶은 영화는 있으시고?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">칭찬을 말아야지… (이딴게 칭찬) 작업멘트 치라고 하면 나도 잘 치거든? (리모콘을 쏠랑 뺏어가 이리저리 돌린다. 그러다 그냥 테이큰 같은 영화라인을 뒤적거리는 중이다.) 너도 없으면 이거?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">이 지나치게 루크굿맨같은 영화픽 뭐지? (존윅, 다이 하드, … 비슷한 장르 영화들이 지나가고, ’북북서로 진로를 돌려라‘가 나올 때 즈음 ‘어!’ 한다.) 형님 저거 봤어요? 명작인데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">아니. 안 봤는데. (한 번 보지 뭐. 라며 재생버튼을 누른다.) 장르가... 첩보 스릴러? (흥미롭기만 하면 상관 없다. 영화가 시작하자, 답지않게 집중해서 화면을 보기 시작한다.) 도망자라, 그러고보니, 7770번. 너도 도망다녔다고 하지 않았냐?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">저렇게까지 도망다닌 적은 없고. 그냥 신분 숨기고 이리저리 숨어드는 건 해봤죠. (그러니까, 매번 가명이랑 위조 신분증 등으로 철저하게 위장한 덕분에 그다지 긴박하고 긴장감 넘치는 상황 같은 건 없었다는 뜻이다.) 그나저나 애칭이 좀 서운한데요. 지금은 수트도 안 입고 있는데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(영화장면에 시선을 고정한다. 신사적인 말투와 거친 서부의 말투 그 중간 어딘가즈음이 마음에 드는지, 대사를 조금 따라해보기도 했다.) 응? 아. 잠깐 집중했더니. (이름보다는 역시 코드명을 많이 불렀던 탓이다.) 애칭이 따로 있어? 그러면 그걸로 부르게.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">애칭이요? (홀짝, 술잔을 기울여 입안을 적셨다. 본명보다는 수많은 가명들로 불리는 날이 더 많았으니 이제와서는 좀 까마득하긴 한데.) 어릴 땐 로, 로이 같은 느낌으로 불렸던 것 같아요.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">로... (마주 술잔을 채워 넘겼다. 물을 마시듯 마시다보니, 벌써금 이쪽은 1병을 비웠다. 남은 것도 영화를 보고나면, 텅 빌 것이다.) 나랑 비슷하네. 룩. 로. 둘 다 발음 하나잖아?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(화면에는 남자 주인공이 여자와 기차칸 안에서 애정을 속삭이는 장면이 재생되고 있다.) 그렇네요. 제 건 애칭 치고는 너무 구리다고 생각했는데, 형님이 불러주시니까 또 나름 듣기 좋네. (나즈막히 킥킥댔다. 이쪽 역시 잔이 비었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">로완. 로. 둘 다 듣기 괜찮은데. 하트도 괜찮고. (당신의 잔을 가득 채워준다. 조금 취기가 올라, 영화 장면을 보고 나지막히 감탄했다.) 기차칸에서 하면 멀미 안 나나… (작게 웃는다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">........ (좀 낯간지럽다고 생각했다. 싫은 기분이었던 건 아니고. 아무튼 답잖게, 가득 찬 잔을 단숨에 비워낸다.) 안 나던데요? 생각보다 몸이 금방 적응해서.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(한 병을 새로 뜯어 가운데에 둔다. 기분 좋은 한숨을 한 번 푹 뱉어낸다.) 별 곳에서 다 해봤네... 나는 제일 특이한 곳이 화장실이었는데. (무난한 편이지.) 해본 곳 중에 제일 기억나는 곳 있어?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(당신과 이런 분위기에서 이런 대화를 하고 있다는 게 새삼스러워서, 낮게 목을 울려 웃는다.) 글쎄요. 비행기? 깜빵? (제 몫의 잔을 채운다.) 형님은 어쩌다가 화장실에서?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">비행기에서 어떻게 해? (툭- 비어버린 병을 밀어낸다. 용케 깨지지않고, 병이 넘어가 약간 굴러가다가 멈춘다.) 뻔하지. 취해서. 간만에 올라오기도 했고. 딱히 거절할 이유도 없었고.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">화장실칸에서요. 이건 진짜 비추. (장난스레 고개를 젓고는 눈을 두어 번 깜빡인다. 묘하게 따끈한 머리를 당신 쪽으로 가볍게 기댄다.) 취하고 거절할 이유 없으면 아무나랑 다 해요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(무게감이 어깨에 올라오면, 조금 안정감이 든다. 그 안정감에 숨을 길게 내뱉었다. 이윽고 취기가 조금씩 더 올라, 눈을 평소처럼 반쯤 뜨고 화면을 바라보았다.) 가끔. 자주는 아니고. 보통은 주먹질하거든.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">… 하하. (보통은 주먹질 한다는 말이 얼마나 당신같이 느껴지는지. 문득 다시 고개를 든다. 장난스레 뺨을 끌어 제 쪽으로 당겼다.) 그럼, (실실대며 짧게 쪽. 입술을 맞댄다. 나도 때릴 거야?)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...저번부터 허락 없이 잘도 한다? (취했냐? 작게 덧붙인다. 조금 헛웃음을 흘린다. 마주 취한 정신이 이성을 흐려 주먹을 날리는대신, 턱을 우악스럽게 잡아 당겨 입을 길게, 깊게 맞춘다. 10초 정도의 시간이 지난 뒤 툭, 놔준다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(장난스레 시작한 도발이 먹혀드는 건 예상 밖이었다. 당연히 한 대 맞거나, 적어도 혼나기라도 할 줄 알았지. 벙찐 탓에 제대로 응하지도 못하고 가만히 얼어있다가 제 턱이 놓일 즈음에야 곧장 뒤따른다. 몸을 기울여 급하게 맞붙는다. 혀를 내어 파고들고, 달큰한 포도주 향이 감도는 입안을 헤집어 뜨끈한 살덩이를 섞었다. 질척이는 소리가 귓가를 자극한다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(마찬가지. 웃으면서 형님, 이러시면 곤란해요. 라는 말정도나 할 줄 알았다. 붙어내는 모양에 당황스러운 낯과 함께 몸뚱이가 밀렸다. 아직은 이성이 살아있다. 당신의 턱을 잡았던 손을 내려 목을 덥썩 움켜쥐고 조금 밀어낸다. 타액이 가늘게 늘어나면, 숨을 한 번 몰아쉰다.) ...후회 안 할 자신 있어? (이쪽은 그것을 가늠하기가 어려웠다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(열오른 몸이 떨어지고 나면, 답잖게 상기된 낯이 여실히 드러날 것이다. 크게 뜨인 눈이 당신을 홀린듯 바라보다가 떨궈진다. 수치와 자책감이 치밀어 귓가가 발개진다.) 죄송해요, 저, 그게, … 형님을 우습게 본 게 아니라, (당신은 제게 있어 이기적인 욕심을 앞세워 행동할 수 없는 사람이었다. 변명을 채 마무리하지도 못하고 입을 다문다. 불안한 듯 손끝이 떨린다.) … … … 기분 나쁘셨죠.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">내 질문은... (술 탓인지, 아니면 방금의 입맞춤 탓인지. 머리가 어지러웠다. 기분이 나빴느냐고? 나빴으면...) 그게 아니였어. (주먹이 나갔을 것이다. 목을 잡았던 손이 떨어져, 떨리는 당신의 손 위를 덮어 잡아 멈추게한다. 그리곤 이쪽도 잠시 한숨을 푹 쉬어낸다.) ...내가 사과해야지. 미안하다. 내가 너무 마셨나봐... 그만 마실게...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(손의 떨림이 조금씩 멎어든다.) 그럼요? (입술을 짓씹는다. 화면 속에서는 어느새 에바 마리 세인트가 케리 그랜트에게 작별을 고하고 있다. &#39;또 만날 수 있겠죠?&#39; &#39;언젠가는요.&#39; ...) 형님이 왜 사과해요. 내가 멋대로 들떠서 들러붙은 걸...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(입술을 씹어내는 것에 작게 웃는다. 이렇게 굴면 정말이지 곤란했다. 살짝 손가락으로 입술을 당겨 물지 못하게 했다. 화면은 이어져, 휑한 도로변이 나온다. 그 전환 장면의 침묵이 일자, 당신과 저 사이에도 어색한 침묵이 일었다.) ...키스는 내가 먼저 했는데. 네 행동에 후회하지 않을거냐고 물어본거야. 난. ...너도 취한 것 같아서.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">조금 취하긴 했는데, ... ... ... (그러니까, 완전히 맨정신이라고 하면 거짓말이겠지만,) 뭐 하나만 여쭤봐도 돼요? (여전히 귓가는 빨갛다. 입안이 바싹 마르는 감각이 생소하다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">뭔데? (단순히 키스 뿐이었는데. 왜이리 정신이 없는지. 이렇게까지? 제 마지막 키스가 언제였는지 머릿 속으로 급히 생각한다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(침묵이 길어진다.) ... 형님은 후회할 것 같아요? 나랑 자고 나면.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">…내가 먼저 질문하지 않았어? … … …하고 난 뒤에 멀어지면 후회하겠지.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(결국 같은 걱정을 하고 있었다는 걸 알아버리면 속절없이 웃음이 터진다. 아, 좀... ...좀 기분 좋은 것도 같다.) 버킷리스트 5번 클리어하시려면 멀어질 수도 없으실텐데. (다시금, 상체를 조금 가까이 했다.) 계속 이름으로 불러주신다고, ... 약속해주시면 안 돼요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(약간은 어두운 방 안, 나오는 영화의 화면 빛이 어지럽게 바뀐다. 조금 더 당신이 가까워지면, 물러나지 않고 고개를 조금 틀어 바라보고 있다. 한 손이 당신의 허리에 자연스럽게 올라간다.) …로완. (정말 후회하지 않을까. 그건 다음이 되어봐야 알 일이지. 일단은, 지금은. 그다지 포기하고 싶지 않았다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(7770이 아닌, 온전한 제 이름. 낮은 목소리가 듣기 좋게 귓가를 파고들면 그게 신호탄이라도 된 것처럼 다시금 입술이 겹쳐졌다. 조금은 급했던 이전의 키스와는 다른, 조심스럽고 부드러운 몸짓이다. 손이 뺨을 감싸고 가볍게 스쳐가 뒷목을 끌어당겼다. ... 아. 술 냄새. 뒤섞이는 더운 숨결에 웃음기가 스민다. 여리고 예민한 점막을 능숙하게 긁고 혀를 얽어대면 야한 마찰음이 시끄러운 사운드 사이사이로 섞였다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(허리 위로 올라갔던 손이 조금 더 파고들어 온전히 감싼다. 숨에 섞인 웃음기를 읽어내면, 눈을 가늘게 떠내 당신의 낯을 불만스럽게 바라본다. 하필 화면은 왜이리 밝고 붉은 황무지인지. 조금 떼어지면 그 사이가 훤했다. 쪽쪽거리는 소리 가운데, 가볍게 얽히는 혀를 물어냈다. 술을 마시고 있는 것도 아닌데, 뇌리는 점점 마비되어간다. 조금 더. 여태 다른 쾌감으로 눌러 놓았던 자극적인 감각이 올라와 낮게 앓는 소리가 일었다. 남은 한 손이 급하게 당신의 멱살을 잡아당겼다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(혀가 살짝 깨물리고, 멱살이 쥐어 당겨지면 그게 꽤 큰 자극이 된다. 고개를 비틀며 어질한 호흡 사이로 파고들기를 몇 차례. 턱이 뻐근해질 때 즈음 쪽. 하는 귀여운 버드키스를 남기며 몸을 떼어냈다.) 침대 놔두고 여기서 하는 건 역시 좀 무드 없나? (그리 말하면서도 뺨에, 목덜미에, 애교라도 부리듯 입술을 눌렀다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">…잠깐. (몸을 조금 더 일으키려다가, 무언가의 뻐근함을 느끼면 카우치에 아예 늘어져버린다. 일어나기가… 곤란하다. 가벼운 입맞춤들에 당신의 머리를 가볍게 쓸어내며 잠시 어색하게 웃는다.) 그냥 여기서 이어서 하지… …근데, 로완. 그… …내가 진짜 오랜만에 하거든. 너랑 달리. 이해 좀 해라… (조금 뻣뻣하게 굴 수도 있다는 소리다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(눈을 나른하게 깜빡인다.) 얼마만에 하길래 그래요? (어째 이렇게 뚝딱거리는 당신은 또 처음 본다. 안어울리게 귀엽다는 생각도 잠깐 해보고. 자세를 고쳐 앉아 옆으로 바라보다가 복부를 어루만지던 손으로 바지춤을 헤쳐 파고들었다.) 한 발 빼드릴게요. 괜찮죠? (속옷 안까지 물흐르듯 침범한 손이 성기를 잡아 꺼내는 일련의 과정이 지나치게 자연스럽다. 눈을 맞추며 가볍게 훑어올렸다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">기지 그 지랄 나고 나서는 한 번 했고. 그전에도 좀 오래... 윽...! (너무 자연스럽게 들어온 손이 이미 반쯤 발기되어 있던 성기를 잡으면, 몸에 힘이 조금 들어간다. 키스 조금 했다고 섰다는 것도 쪽팔리고, 그 상대가 당신이라는 것도 아직은 혼란스럽다. 약간의 죄책감이 동반되어, 당신의 어깨를 꽉 잡아낸다.) 읏... (몇 번의 손길로 바짝 성이 난다. 가만히 시선을 마주치다가, 뺨을 조금 당겨 입을 천천히 맞췄다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(당신에게는 죄책감을 불러일으킬 현상일지 몰라도, 이쪽은 오히려 기분이 고조된다. 나로 인해 이렇게 됐다는 게 기껍다. 더 욕망해줬으면 싶다. 보다 짙어진 숨결과 함께 느릿한 입맞춤이 이어졌으나, 뿌리부터 귀두 끝까지 주물러대는 손길에는 망설임이 없다. 심지에 힘이 들어가 단단해졌을 즈음에 입술을 떼어냈다. 지체 없이 바닥으로 내려가 다리 사이로 자리잡는다.) 싫으면 밀어내요. (그리곤 좆끝을 물었다. 눈을 얌전히 내리깔고 요도구를 할짝거리다가 입을 크게 벌려 뜨겁고 습한 점막으로 기둥을 감싼다. 말캉한 혀가 도드라진 힘줄이나 혈관 따위를 쓸어댄다. 목 끝까지 닿도록 밀어넣고 고개를 위아래로 익숙하게 움직여대다가 문득 반응을 살피려는 듯 시선만 올리기도 했다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(능숙한 손길에 당해낼 재간이 있을 리가 없다. 가끔 생리적 욕구가 돌 때에나 거칠게 주물러대던 것이다. 타인의 손길에 금방이라도 사정할 것 같은 기분이 밀려와 숨을 고르고 있자면, 이번에는 뜨끈하고 말랑한 것이 제 성기를 조이며 물어낸다. 쾌감이 일어 벌겋게 된 귀가 홧홧하다.) 잠깐만... 그렇게까지 안 해도... (그러나 그 말은 쑥 하니 목구멍 안으로 넘어간다. 절로 다리가 벌려졌다. 당신과 시선이 마주치면, 뻣뻣한 성기 끝이 움찔거리며 멀건 액을 흘렸다. 미치겠네. 왜 이렇게 잘 빠는 거야? 자극에 기분이 좋으면서도 불유쾌했다. 마치 비도덕적인 일을 저지르는 것 같아, 당신의 머리를 잡아 쑥 더 제 쪽으로 당겼다. 얼굴이라도 마주하지 않으면 괜찮을까 싶어서.) 하... 쌀 것 같아... (작게 중얼이며.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(당연히, &#39;그렇게까지&#39; 안 해도 괜찮지. 그냥 내가 하고 싶었을 뿐이다. 빌어먹을 후유증 탓에 어느정도 당신이 느끼는 감정이 전해지긴 했거든. 기왕 붙어먹는 거, 잡생각 같은 건 할 새도 없이 흥분하게 만들고 싶었다. 뒷머리가 끌어당겨지는대로 순순히 삼키면 깊은 곳까지 성기가 빠듯하게 들어찼다. 탄탄한 허벅지를 붙든 채 착실히 목구멍을 열고 조여물자 귓가를 파고드는 중얼거림이 있다. 이쯤이면 뻐근해져오는 턱도, 식도를 마찰하는 감각이나 찌걱거리는 마찰음도 전부 기껍다. 한껏 열올라 뜨거운 숨이 흩어진다. 사정을 종용하는 것처럼 거리낌 없이 움직여대며 눈을 치켜떴다.) ...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">ㅇ...! (순간적으로 손에 힘이 들어간다. 움찔거리며 몸을 절로 웅크리고, 이를 악물었다. 눈을 감은 상태로 허리를 절로 흔들자면, 흥분에 타액이 잘게 고인다. 혼자 할때와는 너무 달라, 결국 제 좆대가리 끝에서 울컥이며 정액을 뱉어냈다. 끝까지 삼켜주기를 바란다는듯, 당신을 끌어안고 있다가 천천히 몸을 뒤로 물렀다. 축축하고 미끄러운 것이 당신의 아랫입술을 살짝 눌러내며 빠져나온다. 아 젠장.) 아이 씹... (급하게 당신의 입 안에 손가락을 밀어넣는다.) 조절 못했어. 뱉어...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(비릿한 정액이 목구멍 뒤로 넘어가고, 목울대가 크게 일렁인다. 한껏 맞붙어 있었으므로 바르작대는 몸이나 들썩이는 호흡 따위가 여실히 전해진다. 체액이 양껏 엉겨붙은 성기가 빠져나오고 손가락이 입안을 파고들면 남은 백탁액이 척척하게 고여 있다. 이제와서 뱉기는. 그럴 거면 애초에 입으로 덜컥 무는 일 따위 없었을 거다. 보란듯이 손가락을 질척한 혀로 할짝이며 남은 것까지 전부 삼켜낸다. 압박감을 견뎌내느라 묘하게 축축해진 눈이 샐쭉 휘었다.) 기분 좋았죠? (당신이 퍽 솔직하고 구미당기게 반응해준 덕분에 이쪽도 아래가 묵직해진 참이다. 천천히 무릎을 세워 앉고, 테이블에 아무렇게나 던져뒀던 지갑에서 젤과 콘돔을 꺼낸다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(손가락으로 긁어내려던 시도가 실패하고, 당신이 제 것을 삼켜내자 잠시 구겨진 낯으로 당신을 바라보았다. 끈적거리고 미끌거리는, 손에 남겨진 것을 살짝 문질렀다. 이성이 한 줌 돌아온다. 숨을 고르다가 고개를 돌리면, 당신이 꺼낸 콘돔과 젤이 너무 자연스러워 작게 웃었다.) …봉사받는 기분이였어. (기술이 가득했다. 그렇기에 더욱 사정하기엔 충분했고. 이어 제가 젤과 콘돔을 가져간다.) 풀어줄게. 이리 올라와봐.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">내가 좋아서 한 건데. (예뻐해달라는 낯짝으로 뺨을 무릎께에 살살 부벼댔다. 가볍게 카우치에 오르긴 오르는데.) 내가 박혀요? (그리 말하며 당신의 복부부터 가슴팍까지 주욱 쓸어올린다. 손끝에 걸리는 옷자락 안으로 자연스럽게 파고들면 손 안에 감기는 맨살의 촉감이 못내 기분 좋다.) 나는 반대로 생각했는데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">한 명이랑만 써본 놈보다는 네가 낫지 않겠어? (애교부리는 것의 머릿칼을 가볍게 부벼준다. 손가락 사이에 흘러내리는 것이 제법 기분이 좋아서, 당신이 제 위로 올라오면 목덜미를 팔로 끌어안아 당겨 볼을 가볍게 깨물었다. 말랑한 살 자국 위로 자국이 남도록.) 원래 이렇게 애교부리면서 해?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아뇨, 내가 내키는 사람한테만. (일단 지금은, 다른 누구도 아닌 당신에게 한껏 예쁨받는 기분이 돼서 좋다. 타고오른 손이 유두에 걸리면 가볍게 문지르다가 짓궂은 손길로 꼬집는다. 그러면서 당신의 반응을 살폈다.) 한 명한테만 대줬어요? 근데 별로였다고? 어떤 새끼지, 그렇게 실력 없는 게.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(당신의 손길이 타고오르면, 달뜬 숨을 뱉는다. 온전히 가라앉지는 못한 흥분 탓이다. 예민한 부위가 꼬집히면 허리가 살짝 달뜬다. 여기로 느낀 적은 드문데. 생소한 자극에 당신의 손목을 가볍게 잡아 저지한다.) …있어. 성벽 존나 변태같은 새끼… …거기는 만지지마. 어차피 못 느껴. (손이 자연스럽게 당신의 몸 실루엣을 타고내려간다. 허벅지와 옷가지 사이에 손가락이 들어간 상태로 천천히 문지른다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">… (짧은 떨림을 눈치채지 못했을리가. 제지당하면 그대로 붙들려있긴 했으나 빤히 쳐다보는 시선에는 묘한 기색이 스민다.) 나야 박든 박히든 상관 없는데, … 이러면 좀 뻔하게 굴고 싶어져서. (귓가에 나른한 속삭임이 파고들었다. 당신이 그 ‘변태새끼’에게 무슨 꼴을 당한 건진 몰라도…) 나는 형님이 싫다고 하면 바로 그만둘텐데, 좆같은 기억 덮어볼 생각 없어요?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(시선을 빤히 마주했다. 자연스럽게 당신의 손목을 잡아낸것이 내려가, 깍지를 껴 온전히 잡아낸다. 당신의 옷가지 안을 파고들어가던 손이 속삭임에 문득 멈춘다.) 그게 아니라... (저도 모르게 손아귀가 흥건해진다. 약에 취해, 술에 취해. 제 정신이 아닌 상태였다지만 그때 신체에 가해진 충격은 그대로였다. 조금 눈동자를 빠르게 돌리다가, 잡은 손을 놓고. 몸을 천천히 일으켜 당신을 조심히 끌어안는다.) ...미안. 못하겠다. (이걸 먹튀라고 하나? 제가 무어라고 너를. 조금 식은땀이 흘러내린다.) 네가 싫은게 아니라... ...알지?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(아, 이런. 이렇게 불안하게 만들려던 건 아니었는데. 얌전히 끌어안겼다. 당신은 나이답지 않게 이토록 여린 구석이 있어서, 물흐르듯 만사 흘러넘기며 사는 자신조차 조심스럽게 만든다. 조금 태도를 바꿔 어깨에, 뺨에 짧게 입맞춘다.) 괜찮아요. (뒷머리를 가볍게 쓸고, 눈을 휘며 이마를 맞댔다.) 더 말 안해도 괜찮으니까. 룩, 나 봐요. (형님이라는 호칭을 생략하고 뱉은 이름이 생소하게 느껴졌다. 시선이 맞으면 나른하게 웃는다. 당신이 내키지 않는 일은 하지 않을 거라는 것처럼. 스크린 안에서는 어느 호텔 방 안에서 여자와 남자가 재회하는 장면이 재생되고 있다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(제 내면을 보이지 않기 위해 부단히도 거칠게 굴었다. 들통날까하면 발을 뻗고, 제 후회스럽고 약한 모습까지도 들키기 싫어 부러 술을 마신다. 이마를 맞대면, 미적지근한 열이 느껴져 눈을 천천히 감았다가 떠냈다. 흥분이 잠깐 일었던 아주 찰나의 행위가 언제였냐는듯 아무렇지 않게 입꼬리가 호선을 그린다.) 로. (그럴 것은 알지. 물론 알지. 루크에게 로완은 그런 녀석이니까. 다른 곳이라면 몰라도 제게 있어서만큼은 착한 놈이었으니까.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(들려오는 애칭은 여전히 기껍다. 마주 웃는 모습을 보고 나서야 조금은 짓궂은 눈이 됐다.) 나중에 후회해도 몰라요. 어떻게 나를 마다해? (장난스레 투덜거리면서도 순순히 몸을 떼어냈다. 이렇게 된 이상 혼자 빼야겠네~…) 난 어차피 여러 번 본 영화라. 안 멈춰도 돼요. (그리 말하곤 욕실로 향한다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">엉? (바보 같은 소리. 제게서 당신이 떨어지자 오히려 이쪽이 당황한 얼굴을 해 보인다. 못하겠다고 한 것은 맞지만, 그건 어디까지나 좀 더 깊이 들어왔을 때의 이야기고. 당신의 손목을 잡아 다시 당긴다. 그리곤 제 허벅지 위에 앉혀버리고는 허리를 끌어안는다.) 아직 안 끝났잖아. (영화가? 아니면 이 행위가? 애매한 말을 하며 더운 왼손이 당신의 앞섬 위를 덮어올린다.) ...그냥 계속 옆에 있어주면 안돼?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... 네? (껄끄러운 거 아니었어? 눈을 크게 뜨고 무방비한 낯짝으로 쳐다보다가, 아래에 손이 닿으면 저도 모르게 흠칫한다. 허리에 감겨오던 팔이나 어쩐지 유혹처럼 들리기까지 하는 물음에 조금 초조한 기분이 됐다.) 저 진짜 괜찮은데... (미안해하지 않아도 된다고, 괜히 무리할 필요 없다고, 당신의 어깨를 마사지하듯 콩콩 두드리더니 어색하게 웃는다.) 혼자 풀 수 있어요. 애도 아니고 뭔...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">순서가 달라. ...괜찮은지는 내가 물어봐야하는거고... (허리를 끌어안은 손에 힘을 더 준다. 의수의 검지가 당신의 턱을 조금 들어올렸다가, 엄지로 입술 아래 턱을 눌러 당겨 부드럽게 입을 맞췄다. 입술만 지분거리며 살짝씩 우물거리다가, 제 왼손이 자연스럽게 당신의 속옷 안으로 들어간다. 느릿하게 당신의 것을 움켜쥐고 부드럽게 주물러댄다. 차갑지 않은 맨 손엄지 끝이 당신의 끝부분을 갈작이며 긁어댔다. 이 일련의 행동을 자연스럽게 하면서도, 숨이 달떠져 귀가 시뻘개진다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">잠깐, 아, ... (진짜 괜찮대도. 수차례 맞물리고 머금어지는 입술의 기분 좋은 촉감에 집중하다보면 어느새 거칠한 손아귀 안에 한껏 부푼 성기가 잡힌다. 흐으. 탄성같은 숨이 느른하게 터진다.) 이러면 안 되는데... (혼곤한 목소리로 중얼거리곤 아랫입술을 짓씹는다. 하악에 힘이 바싹 들어가고, 내내 입맞춰대던 게 무색하게 입안이 바싹 말라온다. 허리께가 움찔거리며 자극에 민감하게 반응한다. 숨이 점차 거칠어진다. 요도구가 긁히고, 좆기둥이 문질러질 때마다 꺼떡거리며 더욱 크기를 키우고 부풀어가던 것이 점차 번들거리는 말간 액을 흘리기 시작한다. 달뜬 눈동자, 발긋해진 뺨을 숨기기가 힘들어 고개를 푹 숙이고 당신의 어깨에 이마를 파묻었다. 답잖게 민망했던 탓이다. 끙끙 앓는 듯한 신음소리가 끊길듯 이어졌다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">왜? (귓가에 들린 말에 입술을 잠깐 떼어내고 물었다. 살덩이가 엉키지 않는 키스란 간지럽고 말라있었으나, 아래에는 연신 질척이는 물소리가 일었다. 손가락 끝이 귀두 이음새를 간지르며 탁, 탁 쓸어 올리기도 한다. 액이 밀려나오면 그것을 손을 모아 담아 살살 구멍 끝에 밀어 넣듯 하며 다시금 아래로 펴 바른다.) 로완... (당신 이름을 중얼이며 뒷 머리칼을 손가락 사이에 두고 끌어안는다. 더운 숨이 목덜미에 닿는 것이 기분 좋기 그지없다. 제 고개를 조금 숙여 보이는 귓가에 박힌 피어싱들 중 하나를 가볍게 물어당긴다. 동시에, 아래의 좆기둥 핏줄을 손가락 끝으로 쭉 쓸어올리며 구멍을 꽉 막았다. 장난스러운 웃음이 실실 흘러나오고 있다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(영화의 대사나 배경음이 잦아들 때마다 민망할 정도로 야한 소리가 방안을 채운다. 식었던 공기가 달아오르는 데에는 그리 오랜 시간이 걸리지 않는다. 그냥 담백하게 흔들기만 해도 발기를 가라앉히기엔 충분하다는 걸 당신도 알텐데. 굳이 이렇게까지 본격적으로 할 필요가 있나. 답잖게 페이스에 휘말리는 느낌에 속절없이 바르작댄다. 뒷목마저 뜨끈해지고 허벅지에 바싹 힘이 들어갔다. 그러다 귓가에 제 이름이 파고들고, 귓바퀴가 물리면 저도 모르게 신음을 뱉는다.) 흐, ... ... (그리고 다음 순간. 고개를 들었다. 치미는 사정감에 슬슬 팔뚝을 붙들어 제지하려던 참에 타이밍 좋게 사출구가 막힌 탓이다. 그새 보기 좋게 익은 낯이 원망스러운 표정으로 당신을 마주한다.) 아, 좀... 왜 이래요...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(그러고 싶지 않았으니까. 당신의 반응이 궁금했으니까. 손가락 살이 단단히 당신의 미끈거리는 구멍 끝을 막고 있다. 고개를 들어 저와 마주하면, 그 웃는 낯이다. 귀가 살짝 벌게진 상태로, 눈이 마주치자마자 볼에 입을 가볍게 맞췄다. 마치 지금 손을 흔드는 것이 당신이라도 된다는 마냥 고개를 역으로 묻어 부비적거린다. 살짝의 담배 냄새를 흥분한 숨과 함께 당신의 목덜미에 묻힌다.) 싸고 싶다고 말해주면 놔줄게... 내 이름 부르면서. (영화는 이제 정말 뒷전이었다. 나중에 다시금 봐야 할 테지.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(그러니까, 이게 맞냐고. 아까까진 그렇게 뻣뻣하게 굴었던 인간이. 예뻐해달라고 온갖 아양을 다 떤 것 치고 막상 이렇게 애정어린 스킨십을 받고 있자니 가슴께가 간질거리는 기분이었다. 뭔 사춘기 애도 아니고, 씨발... 민망함에 자책하며 눈을 굴린다. 다른 사람이라면 어떻게든 뻔뻔하게 굴었을텐데 왜 이렇게 입이 안 떨어지는지 모르겠다. 더듬더듬 손을 내려 팔뚝을 붙들었다. 뜨거운 숨이 목덜미에 닿는 것마저 자극이라, 약하게 몸을 비튼다.) 원래 이렇게 사디스트셨어? 좀 봐 주지... (태연한 척 해보지만 목소리 끝이 미세하게 떨리는 것만큼은 어쩔 수 없었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">이게 왜 사디스튼지 모르겠는데. 내 이름이랑, 싸고 싶다는 말 듣고 싶은 게 사디스트 성향에 들어가나? (당신이 턱 아래에서 낮게 중얼거리며, 떨어지는 목덜미를 끈질기게 따라잡는다. 아예 멀어지지 못하게 몸을 더 붙이고, 살짝 깨물어 키스마크를 남겼다. 불긋한 자국을 뜨거운 혀가 조금 핥아올리며 당신의 뒷머리를 잡고 있던 손이 내려가 기둥 쪽 아래를 슬슬 문질러낸다. 각을 세워 긁어내며 핏줄을 툭 퉁기면, 밀려내려왔던 액이 살짝 표면에서 사라졌다가 다시금 미끄덩 내려온다.) 한 번만... 듣고 싶어서 그래. 오랜만에. (드물게 조르는 투로 웅얼인다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... 이렇게 괴롭히고 있으면서. (투덜거린다. 주도권을 내어주는 일에 익숙하지 않은 게 아니다. 당신과 이러고 있는 게 생소한거지. 집요하게 엉겨붙는 몸은 지나치게 뜨끈했고, 여전히 술냄새는 코끝을 찔렀고, 간만에 자국까지 남겨지니 이성을 잃지 않는 게 고역이었다. 아직 취기가 가시지 않아 다행이라고 생각했다.) 아, 진짜아... (좆대를 지분거리는 자극에 저릿한 감각이 등골을 타고 오른다. 귓가가 화끈거려 괜스레 당신의 입술을 가볍게 물었다 놓는다. ...에라이.) ... ... 싸게 해 주세요, ... 룩. 당신 손으로 가고 싶어. (응? 형니임. 애교 섞어 속삭이는 목소리가 유독 습하다. 미간을 찌푸리며 웃곤, 손아귀 안에 험핑하듯 하반신을 살짝 처올린다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(시작이 어려웠을 뿐이다. 어렵게 붙은 불이 꺼지는 것은 더 힘들다. 당신의 반응에 아까 기껏 입으로 빼내준 아래가 저릿거리는 감각이 일었다. 아, 이렇게까지 흥분한다고...) ...잘했어. (이윽고 나온 당신의 말에 입술이 간만에 밀려 올라간다. 눈까지 휘어 웃어내고는, 마침내 자지 끝을 괴롭히던 엄지가 떨어졌다. 마음껏 사정하라는듯, 풀려난 손이 당신의 좆을 뿌리부터 끈적한 끝까지 연신 훑어올리며 흔들어냈다. 질쩍거리는 소리와 뜨거운 감각이, 당신의 태도가 즐거워서, 마른침을 가볍게 삼켜낸다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(해방감. 답답하게 요도구를 틀어막던 압박이 사라지고 성기가 문질러지자 등골이 단번에 오싹해지며 참았던 사정감이 단번에 치솟는다. 막았던 둑이 터지듯 감당하기 힘든 쾌감에 저도 모르게 다급히 당신의 손 위로 제 손을 겹쳐 쥐었다. 빠르게 쥐어짜내는 움직임에 거칠고 정제되지 않은 신음을 토해내며 헐떡거렸다.) 윽, ... 아. 젠장. 기분 좋, ... (그리곤 이내 참지 못하고 울컥 정액을 뱉어낸다. 손 안에 척척하게 백탁액이 감겼다. 절정의 여운에 젖은 속눈썹이 바르르 떨리고 간헐적으로 허벅지 따위가 움찔거린다. 영화는 그새 클라이막스를 향해 치닫고 있었다. 천천히 눈을 뜨고 다시금 입술을 겹쳤다. 파고든 입안은 데일 것처럼 뜨겁다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(뜨거운 것이 닿자마자 미지근하게 식는다. 끈적한 것을 밀어올려 연신 절정에 잠긴 요도구 쪽을 갈작거리며 괴롭혔다. 찌걱거리며 눌렀다가 놓기를 반복한다. 살짝 부어오른 것 같은 부분이 매끄러워 만지는 쪽은 이쪽인데도, 야릇한 기분이 들었다. 또한 기분이 좋았다. 취한 탓을 제쳐두고도, 제 손에 당신이 기분 좋아졌다는 사실 하나가 좋아서 가볍게 젖은 속눈썹 위에 입을 맞췄다.) ... (입술이 겹쳐지면 웃음이 흘러나왔다. 뜨거운 입안을 살살 달래듯 빨아내며 한 손이 올라가 머리칼을 쓸어준다. 느긋하게 떼어내고는 당신의 가슴쪽에 고개를 기대고 화면쪽으로 시선을 향했다.) ...쓸만하지? (뭐. 이어 하는 말이란, 무드가 없었지.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(의외로 집요한 구석이 있네, 이 사람... 마찰에 의해 부푼 좆끝이 만져지는대로 곧대로 움찔거리다 길게 숨을 뱉으면서 손에 힘을 줘 제지한다. 입맞춤의 끝에 장난스레 콩, 이마를 찧었다.) 왜 이렇게 능숙해요? 나한테 뭐라고 할 입장이 아니신 것 같은데... (그러면서 난처한듯 끙, 하고 축축하게 젖은 당신의 손을 내려다본다.) 잠시만... (꾸물꾸물 몸을 일으켜 테이블에 얹어둔 휴지를 가져와 질척한 것을 훔쳐냈다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">나이가 몇인데 이 정도는 다 하지… (본인이 한다고 생각하고 하면 편하기도 하고. 손에 있던 것을 닦아내주자, 의외라는 듯 당신을 바라보았다. 생각보다 섬세한 편이군. 흥분에 올라왔던 숨을 천천히 밀어내듯 뱉었다. 아직까지도 술기운이 여릿했다. 천천히 눈을 깜빡인다.) 너한테 그런 말 들으니까 인정받은 것 같긴 하다 야… (그리곤 픽 웃어버린다.) 대체 네가 어디서 로맨스스캠범으로 잡혀왔나 했더니… 반응하는 거 보니까 잡힐만하네.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(다 닦아내고 나면 가볍게 손마디에 입맞췄다.) ... 이건 또 무슨 소리야. 억지로 반응한 거 아니거든요. 진짜 좋아서, ... ... ... (뭔 이런 걸 변명씩이나 하고 있는 건지. 스스로 생각해도 좀 어이가 없어 눈을 돌렸다. 옷을 추스리고 제 몸에 튄 흔적까지 닦아낸 후 옆에 앉고 나면 어색한 침묵이 흐른다. 기분 좋게 일정한 박자로 쿵쿵거리는 심장소리가 귓가에서 울리는 것 같다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">…좋았다는 소리였는데. 내가 말재주가 그렇게 없어? (마주 나란히 앉는다. 후덥지근한 공기가 아까까지는 기분 좋게 다가왔는데, 지금은 다소 어색하게 느껴졌다. 영화는 어느새 마무리 장면에 접어들었다. 장면이 전환되는 그 순간의 정적에, 과하게 뛰어 두근거리는 심장소리가 제 귓가에 선명하게 들린다. 당신에게도 들릴까 봐 부러 부산스럽게. 조금 얼굴이 시뻘게져서는 괜히 담배를 하나 물어낸다.) … … …네가 기분 좋은게 좋아. (그리고 중얼였다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">누가 칭찬을 전과 운운하면서 해요. (괜스레 더 투덜거렸다. 손은 잘 쓰시면서 입은 영. 무드 잡을 땐 잡으신담서요. 이건 아직 한참 더 배우셔야겠는데. 괜스레 종알거리는 말들이 이어지다가, 이내 들리는 말에,) ... (입을 꾹 다물고 만다. 도망치는 연인들. 스크린을 응시하던 시선이 내리깔린다. 짧은 한숨을 뱉고는 그냥 몸에 힘을 풀고 당신에게 기대기를 택했다.) 지금 이 타이밍에 그런 말 하면 너무, 꼬시는 것처럼 들리는데, ... ... ...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">원래 원나잇 할 상대 찾을 때는 잘 털어. (나중에 내기라도 할 판이다. 조금 툴툴거리며 대답하다가, 담배 끝에 불을 붙였다. 천천히 들이키고, 느릿하게 뱉는다. 한 모금이 끝나면, 빼내서는 당신의 입에 물려둔다. 멍하니 장면을 바라보며 하는 한 마디란.) 나는 저 여자가 정말 사랑하게 될지 몰랐어. (기분 좋은 두근거림이 전해진다. 당신의 머리 위에 제 머리를 툭 얹었다.) 맞는데. (아무렇지 않게 대답한다.) …너라면 괜찮을 것 같아서.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(자연스레 물려진 담배에 멍청하게 눈만 끔뻑이다가 필터를 깊게 빨아들인다. 연기가 한숨처럼 흩어졌다. 그리고 이어지는 침묵. 제 기억대로라면 얼마 가지 않아 영화는 끝날 것이다. 만족스러운 해피엔딩으로.) 아깐 못하겠다며... 됐어요. 나 기분 좋으라고 하는 거면 지금도 충분히 만족스러우니까. 나라고 머리에 섹스만 들어찬 놈도 아니고...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(그 말에 조금 갑갑한듯, 근처의 술병을 가져와 다시금 잔에 따라 벌컥 들이켰다. 어디까지 몰려야하지? 애초에 이런 행위는 혼자 해결해도 충분했는데. 나는 지금 왜 이렇게까지 굴고있는거지? 제 자신이 이해가 가지 않았다. 입 안을 꾹 물어내다가, 천천히 말을 꺼낸다.) …예전에… 좆같은 새끼한테 잘못 걸린 적이 있어. 의체에 성욕을 느끼는 새끼였는데… … …의무실에서 며칠 신세질 정도로 만들어놨거든. (그것은 섹스라기보단 폭력류다. 약에 취해 기억이 반 날아간 행위.) …그게 잠깐…그래서 그런거야. 그래서… (뭘 변명하고 있는건지…) 반사적으로… (너와 그 사람은 다른 사람인데도 불구하고. 영화가 끝난다. 당신의 입에서 담배를 뺏어 제가 마저 다 피워버리곤 꽁초를 대충 병에 밀어넣어버린다.) 그러니까 오해하지 말라고. …영화 끝났다.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(눈이 크게 뜨인다. 중간부터는 몸을 아예 틀어 제대로 시선을 맞춘 채였다. 점멸하는 화면. 이어지는 블랙 스크린. 두 사람의 상이 흐릿하게 맺힌다. 마땅한 말을 찾지 못한 입술이 몇번 달싹이다가 이내 탄식이 터졌다.) 어쩌지. ... 생각도 못 했어. 저는 그냥 형님이, 나랑 이러는 건 좀 껄끄러운가 해서... (머뭇거리다 짧게 버드키스했다. 이런 얘기까지 꺼내게 해서 미안해요. 소근거리곤 뺨을 부빈다.) 나도 형님이 기분 좋은 게 우선이라 그랬어요. ... 누가 나 보고 꼴려하는 게 제일 성감대인 인간이라. (짧게 웃었다.) 그래서. (장난스레 목덜미를 물었다 놓는다.) 어떻게 하고 싶다고?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">너보고 안꼴리는 새끼도 있…(나? 잠깐 말을 멈추고 당신을 뻔히 관찰하는 시선으로 바라본다. 괜한 말을 했나? 그러나 당신이 오해하는 것이 더 싫었다. 차라리 과한 정보일지라도, 이해하는 것이 더 나았지.) …옛날 일이니까… …(사실 제가 양심이 있느냐 없느냐 묻는다면 지금 상당히 없는 편이지만…) 내가 언제부터 양심 있는 새끼였다고… (당신에게 들릴듯 말듯한 목소리로 작게 중얼이고는 목덜미가 물리면 그대로 당신의 손을 잡아 끌어, 아직 부풀어 있던 제 앞섬 위에 둔다.) …아까 빨아준걸로는 부족해… 아니… 네가 이상한 소리 내서…(자연스러운 당신 탓이다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">............ 오늘 이렇게 되기 전까지는 안꼴리는 것처럼 구셨거든요, 어디의 누구 씨가. (쪽. 물었던 곳에 입맞췄다 떼어내곤 묵직한 고간 위를 가볍게 문지른다. 아. 이런 때가 못내 즐겁다. 얼마나 난잡한 상상의 주어가 되든 욕망당하는 감각은 기꺼운 법이다. 바지춤을 헤치고 벗겨내는 동작은 물흐르듯 자연스럽다.) 섹스 판타지. 버릇. 페티시. 어필할 시간 30초 드릴게요. 30, 29, ... (장난스러운 웃음 섞인 목소리를 내며 저 역시 상의를 탈의했다. 하얗고 마르긴 했으나 눈요기거리로 삼기엔 꽤 좋을 정도의 근육이 잡힌 몸이다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...솔직히 내가 너한테 그런 말들 하면서 섹스까지 하자고 하면 너무 쓰레기 새끼 아니냐...? (조금 황당한 듯 중얼이다가, 당신이 제 앞섬을 문지르면 움찔. 가볍게 떨어낸다. 이미 천 안은 축축하고 덥다. 답답하기까지 했다. 당신이 그것을 자연스럽게 벗겨내면, 제 앞에 드러난 어깻죽지에 얼굴을 묻었다.) ...페티시는 알아본 적 없고... (그것을 먼저 깨물어낸다. 잘근거리며 이빨자국을 내다가, 피어싱이 가득 박힌 귓가에 대고 느린 숨을 뱉으며 낮게 속삭거린다.) 계속 붙어먹는 게 좋아. 다른 생각은 못 하게... 체력 다 할 때까지. 취하고, 섹스하고, 좋다고 말하는게 좋아. (툭- 이마를 기대고는 살짝 부빈다.) 넌. 그냥 다른 사람이 좋으면 좋은 거 말고.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... 뭔 말을 했는데요? 뭘 자꾸 자학을 하신대. 본인 낮추는 것도 습관이에요. (자연스레 타박하고 나면 얕게 어깨에 닿는 숨과 자극, 이어 더운 호흡 섞인 목소리가 귓가를 파고든다. 그다지 과하게 음란할 것도 없는 내용임에도 짧게 전율하게 되는 건 마냥 자신이 귀가 성감대라서는 아닐 것이다. 손을 뻗어 복부를 더듬다가 천천히 밀어올린다. 아까 제지당했던, 그 즈음의 위치에서 멈칫하곤 단단한 배며 가슴팍까지 죽 훑어 더듬었다.) 그냥 좋은 거 말고. 내 좆이 좋아 죽겠다는 듯이 물고 씹고 조여대는 거. 내 뒷구멍 아니면 제대로 세우지도 못할 것처럼 구는 거. 단정했던 눈이 한껏 발정나서 나만 가득 담는 거. 그런 순간들이 좋은 거라서, 나는... (천박한 말을 아무렇지 않게 뱉으며 샐쭉 웃었다.) 왜요. 그렇게 해주게?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">잔뜩... (보호자처럼 굴었지 않나. 민망한 웃음을 흘리면서 툴툴거리듯 당신의 피어싱이 있는 귀를 자꾸만 깨물고, 혀끝으로 핥아올리게 된다. 애정을 갈구하는 것처럼.) ...내가 말한 것처럼 하다 보면 당연히 그렇게 될걸. (제지당했던 위치까지 미끄러운 손이 닿으면 잠시 숨을 참았다가 뱉어낸다. 당신과 시선을 똑바로 마주치면서, 웃옷을 벗어내자 의수가 이어진 곳에 흉이 있는 팔뚝과 복부, 자잘한 자상이 있는 몸이 드러난다. 숨을 크게 들이키고 내쉴 때마다 약간 열이 올라 벌게진 흉곽이 오르내린다.) ...응. (그리곤 테이블에 두었던 젤을 가져와 이로 뜯어낸다. 왼손에 잔뜩 그것을 쭉 짜내곤 당신의 속옷을 오른손으로 쭉 내린다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(귀가 깨물리고, 말캉한 혀로 핥아질 때마다 미약하게 눈썹이 꿈틀거린다. 진짜, 참기 힘들게 하네. 누군가는 더티톡이라 질색할 만한 말에도 당연하다는 듯 답하고 스스로 옷을 벗어내는 모습을 빤히 본다. 시선이 닿을 곳이 많았다. 그리고 그것들은 저로 하여금 기이한 감각을 뱃속에 들끓게 하기 충분하다. ... 이런 꼴리는 몸을 가지고 그렇게 늘어져서 술이나 마시고 있었다 이거지. 하하.) 아무리 생각해도, 형님은, 좀, ... 야한 구석이 있는 것 같아. (이런 감상이나 뱉고 나면 자연스럽게 맨 살결이 한껏 드러난 뒤다. 젤로 축축한 당신의 왼손을 바라본다. 잠깐의 고민. 아무래도 당신한테 익숙한 건 이쪽이기야 하겠지. 아까 들었던 이야기 역시 마음에 걸렸기도 하고... 얌전히 무릎을 세우고 씩 웃는 것으로 허락을 대신한다. 한발 빼고 나면 뒤집을 생각만 가득했지만 미리 알려줘봐야 긴장만 시키게 될 것 같아서 입을 다문다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(당신이 무릎을 살짝 세워주면 저도 모르게 마른침을 삼켰다. 왼손이 조심스럽게 내려가 구멍 위를 부드럽게 쓸어낸다. 끈적한 젤을 부드럽게 발라가며 소파에 남은 것이 늘어질 만큼 흠뻑 적시더만, 중지가 사이를 비집고 느릿하게 들어갔다. 당신이야 이런 행위가 익숙하리라고 생각하면서도, 저도 모르게 몸에 익은 행위가 나온다. 달래듯 당신을 빤히 바라보며 뺨을 쓸어댔다.) 아프면 말해... (그리곤 이어 자연스럽게 약지가 같이 들어간다. 같이 들어간 두 개의 손가락이 뜨거운 내부에 젤을 바르듯 이리저리를 펴내고 누른다. 약간 마디를 굽혀 배 쪽으로 쿡쿡 올려보기도 했다.) ... (얼굴이 시뻘게졌다. 손가락으로 느껴지는 것만으로도, 아래의 좆이 참을성도 없이 이미 터질 것처럼 부풀었기에. 아랫배가 뻐근했다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(뺨에 닿는 손길이 무척이나 낯간지럽게 느껴졌다. 달아오르는 건 금방이다. 사실 뒷구멍을 따이는 일 정도야 별 거 아니었으나 상대가 당신이라는 게 제 기분을 묘하게 만들었다. 덕분에 기분 좋은 비음을 흘리며 상대를 자극할 타이밍도 놓쳐버린다. 아니. 별로 그럴 마음도 들지 않았던 것 같다. 연기하고 싶지 않았다. 대신 눈을 내리깔고 몸에 힘을 풀었다. 발갛게 달아오른 뺨을 하고 숨을 몰아 뱉으며 웃는다.) 하하, … … 쑤셔지는 건 난데 왜, 형님이 이런 얼굴이에요… (존나 꼴리게. 그르렁대듯 속삭이며 입술을 물었다 놓는다. 좁은 내벽은 자극이 가해질 때마다 민감하게 꿈틀거리며 손가락을 빠듯하게 조여대고, 접합부에서는 체온에 의해 녹은 젤이 부지런히 찌걱거리는 소릴 냈다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...아파서... (아프면 말하라고 했는데. 사실 아픈 것은 이쪽의 좆대가리다. 아래에서 들려오는 찔꺽거리는 소리가 귀에 닿을 때마다 흥분에 심장이 미친 듯 뛰어댄다. 이어 손가락이 쫙 벌려지며 내벽을 밀어 넓혔다. 말캉한 내벽이 좁혀지려 우물거리는 것을 움직이며 만지작거린다. 아, 한계야. 결국 당신의 입술에 다시금 입술을 묻고 뺨을 만지던 손을 뻗어 콘돔을 주워온다. 전립선을 찾아 대략의 위치를 가늠하던 손가락도 빠져나와 포장을 뜯고, 껄떡이는 제 좆에 끼워낸다.) 더 풀어줘야 하는데... 급해서... (살짝 입술을 떼어내고 속삭이듯 중얼이면 늘어난 타액이 끊겼다.) 넣어도 돼...? (이런 허락까지 받는게 얼마만이지. 당신의 양 다리를 제 허리에 감게 하고, 귀두 끝이 움찔거리며 구멍을 살살 비빈다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(안을 헤집는 손짓에 짧은 침음을 연달아 흘리고 혀를 섞는 행위에 집중하기도 잠깐. 곧 당신의 반응에 참지 못하고 끅끅거린다. 아. 진짜 좀. 적당히 귀여우시라고...) 안 된다고 하면. 참으시게? (짓궂게 묻곤 눈을 샐쭉 휜다. 그리곤 허락 대신 허리를 바짝 감았다. 다음은 뻔하다. 카우치를 짚어 조금 더 편한 자세를 찾고, 당신의 뺨을 쓸고, 뒷목을 붙들어 당긴다. 빈틈없이 몸이 밀착하도록. 간지럽게 갉작여대던 움직임이 제대로된 쾌감을 좇도록. 시선을 빤히 맞춘 채 몸에 힘을 풀었다. 젤로 축축하게 젖은 구멍이 수축과 이완을 반복하며 부푼 귀두를 삼켜낸다. 손가락과는 차원이 다른 두꺼운 부피감에 눈썹이 미약하게 찌푸려졌다. 열이 올랐다.) 흐, ... ...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(안된다고 하면 분명 참았을 것이다. 잔뜩 열이 올라 연신 졸라댔을지언정. 당신을 마주 끌어안고, 온전히 신체를 밀착했다. 뱃가죽이 닿을 정도면, 그 사이에 당신의 성기가 비벼지듯 끼워진다. 천천히 허리를 밀어 넣는다. 손가락으로만 느끼던 매끄럽고 좁은 내벽이 제 좆 끝을 물어대면, 그 쾌감의 끝을 직감할 수가 없어 흐려진 시선으로 당신을 바라본다.) 아...윽.... (핏줄이 눌릴 정도의 압박. 젤로 끈적한 접한부에서 발라둔 젤이 밀려나온다. 뿌리 가까이까지 멈추지 않고 밀어넣었다. 넣는 것은 자신인데, 왜 이렇게도 미칠 것 같은지. 당신의 어깨를 강하게 끌어안는다.) 기분 좋아... (허리를 잘게 툭툭 쳐올린다. 안을 헤집듯 살짝 꿈틀거리다가 숨을 몰아쉬었다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">잠깐, 아. 너무. (깊은데. 입술을 짓씹으며 불안정한 호흡을 뱉는다. 이러면 곤란하다. 제대로 몸의 힘을 풀기도 쉽지 않고, 무엇보다 정신이, ...) 형님... 윽. 조금만, 조금만 천천히. 나도 여기로 하는 거 오랜만이니까... 응? (단순한 문장임에도 중간중간 목소리가 떨렸다. 버겁지 않다면 거짓말이었을 거다. 비좁은 틈을 가르고 치닫는 뜨거운 이물감에, 내장을 짓누르는 듯한 부피감에 내벽이 잔뜩 긴장해 경련했다. 양 뺨을 붙들고 시선을 맞춘다. 아마도 피차 열기에 젖어 침잠했을 것이다. 긴 호흡을 뱉으며 입술이 닿는 곳마다 쪽쪽거리고 발갛게 익은 낯을 부빈다. 그러다보면 조금씩 몸이 열렸다. 스스로 생각해도 답잖은 짓을 하고있다는 것쯤은 안다. 조금씩 허리를 들썩여 움직임을 돕는다.) 하아, ... 원래 이렇게, 귀엽게 구는 타입이에요? (이러면 꽤, ... 인기 많았을 것 같은데. 덧붙이며 웃는다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(미안. 당신의 말에 속삭이듯 말하며 다시금 입술을 겹쳤다. 전립선을 뭉그러뜨리며 자리한 좆이 안달이 난 것이 느껴졌다. 당장이라도 움직이고 싶은데. 그럼에도 불구하고 그 욕구를 참아내느라, 이마와 목에 핏대가 불거졌다. 잠시 당신이 적응할 수 있도록 멈춘 상태로 입을 맞춘다. 닿는 낯에 마주 열오른 뺨을 부비며 덥고 습한 숨을 귀에 불어넣었다. ) ...기억 안 나. (내벽이 조금 말랑하게 열리면 천천히 허리를 빼고, 다시 밀어 넣기를 반복한다. 찔꺽이며 접합부와 살결이 부딪쳐 나는 소리가 일었다. 손이 내려가 사이에 자리했던 당신의 성기를 천천히 문지르며 자극한다.) 로... (당신의 이름을 중얼이며 목덜미를 꽉 물어냈다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(잘게 전율한다. 귓가에 파고드는 뜨거운 숨에 오싹한 쾌감이 치민다. 급히 입술을 씹으면 속눈썹이 덩달아 바릇 떨린다.) 으흑, ... (안을 짓처올려질 때마다 몸이 들썩거렸다. 야한 마찰음이며 저를 부르는 목소리가 하나같이 노골적인 자극처럼 느껴졌다. 눈을 감고 꽉 들어찬 부피감이며 앞을 쓸어대는 손길을 차분히 느끼다 조금씩 눈꺼풀을 밀어올려 붉은 눈동자와 시선을 마주했다. 문득 탄성이 터지고 내벽이 움찔거린다.) 아아, ... (열오른 낯을 감춘다. 답잖은 짓이란 걸 알면서도 팔을 뻗어 한껏 끌어안는다. 목이 물리는 감각이 차라리 반가울만큼 흥분을 주체하기가 힘들었다. 녹진하게 풀린 안은 쉽게도 꿈틀대고 조여들었다. 스팟이 건드려지고, 저릿함이 등골을 타고 오를 때마다 강하게 수축하며 좆을 빨아들였다. 이제는 의지할 영화의 소음조차 없는 공간이 두 사람 분의 숨소리로 채워진다.) 조금만 더...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(연신이고 박아 넣고 싶었다. 막혔을 끝까지 제 좆을 꾸득 밀어 넣고 안을 가득 채워 넣고 싶었다. 기분 좋게 제 아래를 빨아대는 내부에 조금 더 들어가게 해달라는 듯 귀두 끝이 결장에 아슬하게 밀려올라갔다가 내려온다. 욕심내면 안되는데. 오랜만에 한다잖아. 참아야 하는데. 당신과 순간 눈이 마주치고 내벽이 꿈틀이면, 순간적인 사정욕에 입 안을 꽉 물어 툭- 하고 살점이 터지는 소리가 일었다.) 헉… 아… 살살 조여… 진짜 자지 터질 것 같으니까… (중얼이며 결국 몸을 일으킨다. 당신의 양 허벅지를 움직이지 못하게 끌어안아 잡고, 속도를 내 추삽질을 했다. 접합부에서 물소리가 일며 허옇게 젤이 거품이 되어 엉겼다. 아랫구멍을 유린하며 연신 뱃가죽 위쪽으로 살짝 그 실루엣이 보일 정도로 쑤셔댄다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(이쪽이 부추기긴 했지만 결장까지 뚫을 듯 밀려들어오는 감각에 몸이 파득 튀었다. 압박감과 쾌감에 발끝이 곱아들고 카우치의 시트를 긁는다.) 내가, 조이는 게 아니라, 으흑. 형이 큰 거잖, (항변하던 목소리가 끊긴다. 허벅지가 단단히 붙들린 탓에 요령을 피울 수도 없는 자세다. 분명 아까까지만 해도 쑥맥같이 굴었으면서. 시야가 이지러진다. 빈틈없이 들어차는 몸이 만족스러우면서도 못내 버겁다. 스팟을 자극당할 때마다 허리를 뒤트는 움직임이 뚝뚝 끊겼다. 감전이라도 당한 것처럼 군다. 점점 이성이 흐려졌다.) 아흐, 으. 룩… … (들뜬 목소리로 당신을 부르곤 더듬대는 손을 뱃거죽 위로 올린다. 깊이 박힐 때마다 좆끝이 뭉툭하게 만져지면 그 감각이 못내 이상한지 얼굴이 울긋불긋해졌다. 습한 목소리로 혼곤하게 중얼대며 웃는다.) 하하, 하… 여기로도, 힉, 만져져… (윤곽을 꾹 누른다. 이렇게 하면 당신도 내 손길이 느껴지겠지.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(당신의 목소리에 귀가 홧홧했다. 제가 움직이는 양마다 반응하는 것이 또 자극이 심하여 아랫 구멍에 제 좆을 밀어넣는 속도가 빨라졌다. 찰박거리는 소리가 커지고, 더운 숨소리, 야릇한 신음 소리, 가끔 살결이 부딪치는 소리가 섞인다.) 미, 안해... 하... 너무, 너무 서서... 가라앉지가... (제가 조절할 수 없는 것임에도 사과한다. 당신이 손으로 그 위를 누르면 그 감각에 바르르 떨며 뿌리까지 밀어 넣은 채 숨을 헐떡였다. 그 위에 천천히 제 왼손을 얹어 같이 잡아준다. 피부가 젖어 반들하고 발갛게 달아올라, 귀와 어깨 부분이 저릿거렸다. 그 상태로 조르듯 허리를 돌리면 스팟을 으깰듯 누른 상태로 제 좆이 껄덕거린다.) ... (로완. 당신의 이름을 부르는 것밖에는 할 수 없었다. 몸을 숙여 제 허리에 다리를 감게 했다. 빼고 싶지 않았다. 이대로 쾌감만이 영원하길 바란다.) 고마워... (중얼이며 말하곤, 그 이후엔 바로금 피스톤질이 이어졌다.<br>손은 그대로 꽉 잡은 상태로, 몸과 몸 사이에. 당신이 무어라 대답하지 못하게 입을 제 입으로 막고, 온전히 제 몸으로 당신을 가둬 누르며.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(문득 거짓말 같다는 생각을 한다. 혹은 터무니없는 꿈이거나. 아득하게 정신이 멀어지는 와중에도 몸을 섞고 있는 게 당신이라는 걸 상기하면 기이한 배덕감과 흥분이 마구 뒤엉켜 치밀어올랐다. 귓가를 파고드는, 제 이름을 부르는 목소리에 저도 모르게 하악에 힘이 바싹 들어간다. 쾌감이 감당하기 힘들만큼 짙었다. 붙든 손은 데일듯 뜨거운데 뿌리치고 싶지가 않았다. 고맙다니. 대체 뭐가 고마운데, 영문 모를 말에 답을 뱉으려던 입술이 틀어막혔다. 빈틈없이 맞붙은 채 짓눌린다. 아. 잠깐. 젠장, 이거 너무.) ... 으흐, 응...! (솟구치는 성감에 어쩔 줄 모르는 신음이 겹쳐진 입술 사이로 샌다. 뜨겁다 못해 얼얼한 체온은 마지막으로 남겨둔 이성조차 날리기 충분할 정도로 저를 몰아붙인다. 선명하고 뚜렷했던 것들이 전부 열기에 녹아 뭉그러지는 감각. 몸이 고장난 듯한 저릿함을 견디기가 힘들었다.<br>뱃속을 빠듯하게 채운 움직임을 손끝으로 느끼다보면, 서로의 열기가 옮겨붙어 증폭되기라도 한듯 끊기지 않는 자극에 숨이 달큰하게 젖어든다. 한껏 달아오른채 스치던 성기는 어느새 축축해진지 오래였다. 슬슬 위험하다. 고개가 젖혀진 탓에 입술이 어긋난다.) 룩, 나... 갈 것 같, 은데, 아... (쾌감에 집중하느라 미간을 잔뜩 구기다 문득 웃음을 터트린다. 이렇게까지 기분이 좋다는 게 어색할 정도로 이상하게 느껴진 탓이다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(멀어지는 그 입술을 급하게 따라간다. 각도 탓에 부여잡지 못하면, 젖혀진 목덜미를 따라 입술이 급하게 위를 더듬고, 깨물어댔다. 가죽을 깨물어 살짝 벌려진 잇새로 더운 숨이 나온다. 이어 터질 것 같은 감각이 아래로도 기어 나왔다. 급한 움직임이 티가 날까. 벌겋게 혈액이 몰린 좆이 당신의 젖은 내벽을 조금 빠져나왔다가 다시금 밀어넣어진다.) 로완, 로완... 아... 흐...  (갈 것 같다는 말에 아래를 연신 박자감 있게 쳐올리며 열 오른 시선을 마주했다. 겹쳐 잡았던 손을 고쳐 잡아 빼내 깍지를 끼웠다. 그리고 제 앞으로 끌고와 그 손등에 입술을 맞춘다. 제 시야 가득 당신이 들어온다. 저 때문에 신음을 내뱉는 당신이 사랑스러우면서도 과하게 야하다. 반쯤은 열락에 정신이 나간 눈이 휘어 웃었다.) 같이 가자... (사실 이쪽은 이미 몇 번이나 한계에 달했다. 빼낸다면 이미 몇 번 저도 모르게 흘린 흔적이 남아있을지도 모른다.<br>마지막으로 깊숙하게 밀어 넣자, 귀두 끝이 결장 근처에서 그 안을 뚫을 듯 자리한다. 핏줄이 움찔거리며 당신의 안에서 울컥거리며 사정했다. 저도 모르게 손등과 미간에 핏대가 올라 헐떡였다. 이를 악물고, 몇 번이고 흠칫거리며. 가득. 당신 안에서.) 헉... 흐으... 로완....</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">윽, … (사냥당하는 듯 깨물리고 헤집어지는 것만으로도 이미 과한 자극인데, 열오른 시선이 닿고 손등에 입맞춤이 내려앉으면 전신이 오싹해진다. 눈가가 흥분으로 잔뜩 짓무른다. 하나같이 버겁다. 짓씹어 물었다. 붙들리지 않은 손을 뻗어 당신의 집요한 눈을, 저와 마찬가지로 뜨거운 뺨을, 귓가를 매만지듯 쓸었다.) 왜 그렇게, 웃어요… 사람 기분, 이상해지게, … (투덜거리는 음성이 신음과 섞여 마구잡이로 튄다. 그러다보면 극점을 처올리는 힘에 몸을 지탱하는 것조차 힘겨워진다. 약이라도 한 것처럼 눈이 풀렸다. 허벅지가 경련하며 조여들었다가 멋대로 벌어지기를 짧게 반복한다.) 아, 아흑. 룩, 기분 좋, 으응, …! (사고를 거치지 않고 감상을 내뱉다가 마침내 파정하고야 만다. 끈적하게 늘어지는 정액이 두 사람의 배를 엉망으로 더럽힌다. 더운 숨을 가쁘게 몰아뱉고 흐릿해졌던 초점과 이성이 돌아오기를 기다리며 속삭이듯 중얼거렸다.) 아, 이거… 버릇 들 것 같은데…</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...하... (뺨을 쓸어내는 당신의 손에 기대듯 고개를 돌렸다. 살짝 고개를 올렸다가 내리며 스스로 뺨을 부비며 신음을 나직하게 뱉는다. 어떻게 하지. 더, 당신이 나를 만져주었으면 좋겠다. 그리 생각하며.) ... (당신이 내부가 끈적하게 제 자지에 달라붙는다. 두근거리며 마지막으로 바짝 조이는 것이 연신 기분 좋고, 몽롱하여. 아래를 느긋하게 빼내다가, 다시금 천천히 밀어넣는다. 콘돔 안에 있던 정액이 밑으로 살짝 밀려나 바깥으로 조금 새었다. 거품이 허옇게 인 젖은 액체 위로 그것이 섞인다.) 원래 이렇게 안해..? (가쁜 숨 위로 중얼이며 허리를 빼낼 생각을 하지 않고 히죽거린다.) 안에 엄청 조인다... 빼지 말라는데 로...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(행위가 멈추면 공기에 닿은 몸이 식을 법도 한데 열이 가시는 속도가 지나치게 느렸다. 체액으로 잔뜩 젖어 끈적한 몸을 갈무리할 생각도 하지 못한 채로 당신의 양 뺨을 잡아 끌었다. 눈을 내리깔고 입맞춘다. 혀를 내어 섞지도 않는 담백한 키스를 두어 차례 반복한다.) ... 원래 이렇게 안 해요. 이렇게까지 본명 불린 적도 없고. (입술을 맞댄 상태에서 소근거리곤, 다시 마지막으로 쪽. 그러고 나서야 고개를 비틀며 키득키득 웃는다.) 그냥 형님이 빼기 싫으신 거 아니고? 어째 할수록 점점 더 커지던데. 이쪽은 배 뚫리는 줄 알았거든요. (아무렇지 않게 이런 말이나 뱉어대는 주제에 귓가는 여전히 붉다. 잠깐의 침묵. 결국 민망한 듯한 탄식이 이어진다. 믿기지가 않네...) ... 나 좀 부끄러운 것 같은데.</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(이번에는 이쪽도 눈을 내리감는다. 간지러운 소리가 몇 번 이어지고 나서야 눈을 가늘게 떠냈다. 마지막 소리가 일고 나서도 아무 말을 하지 않고 눈을 마주했다. 입술에만 시선이 가 있었다. 부끄럽다는 그 말에 흐… 하고 나지막하게 웃음을 짧게 흘렸을 뿐이다. 다시금 입술을 겹치고 떼어내며, 눈을 내리감고 천천히 아래를 무른다. 흠뻑 젖고 들어찼던 것이 빠져나간다. 얇은 피임도구 끝에는 흥건하게 정액이 고여있었다. 그것을 쓸어내 대충 옆에 버려버리고는, 손에 묻은 액으로 약간 벌어진 아래를 문질 거린다.) 네가 야하게 굴었잖아. (가슴 위에 얼굴을 얹고 중얼인다.) 콘돔 더 있어?</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... (옅은 침음을 흘린다. 안을 가득 채웠던 게 빠져나가는 감각마저 과한 자극처럼 느껴진다. 체액이며 젤이 엉겨붙은 채 움찔거리던 구멍이 다시금 닿는 손길에 꽉 수축한다.) 야한 건 형님 쪽이고. (심박은 빠르고, 거세다. 꽤 답잖은 상태라는 건 저 자신도 충분히 자각하고 있었다. 가슴팍을 간지럽히는 머리칼을 가볍게 쓸었다. 당신을 달래기라도 하는 양. 장난스레 반문한다.) 많죠. 몇 개나 필요하길래?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(손으로 문질러내는 것이 꽉 닫히면 또 그것에 가볍게 열이 올랐다. 방금까지 당신 안에 저를 밀어 넣고, 쑤시고, 적시고, 채워 넣은 것들이 떠올라서이다. 떨리는 숨을 천천히 뱉었다.) 음... 두 개에서 세 개... 술 좀 더 마시면 더 할 텐데 그건 싫고... (이미 술에서 온전히 깬 상태다. 말짱한 정신이 간만에 명쾌하였으며, 드물게 다른 생각으로 가득 찬다. 슬쩍 고개를 들었다.) 침대로 가자.</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">하하... 체력 좋으시네. (눈이 마주친다. 잠깐의 침묵. 그리고 이번에 먼저 시선을 피한 건 이쪽이다. 괜스레 분주한 척 당신을 살짝 밀고 몸을 일으키며, 서랍 안에서 포장된 콘돔 패키지와 젤을 꺼냈다. 그리곤 말없이 침실로 먼저 향한다. 그 짧은 이동시간에라도 열을 식혀야 했으니까. ... ... ... 그니까, 대체, 술기운에 하기 싫을 이유는 또 뭔데...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(먼저 자리를 옮기는 당신을 가만히 바라보았다. 그리곤 잠시 제 이마를 짚어냈다가 쓸어내렸다. 이렇게 될 줄은 몰랐다. 정말. 아니, 그랬나? 하지 않으려면 안 할 수 있었다. 다만 참을 수 없었을 뿐.) ... (느릿하게 일어나 침대로 따라간다.) ...로완. (잠시 시선을 마주치지 못했다. 당신 맞은 편에 천천히 앉는다.) ...나 술 마실까? (손 끝이 당신의 발 끝에 얹어진다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(이 묘한 공기의 흐름을 무시할래야 할 수가 있어야 말이지. 초침소리마저 들릴 듯한 침묵이 이어진다. 아. 이게 뭐라고 이렇게...) ... 왜 술 안 마시려고 했는지 물어봐도 돼요? (발끝을 살짝 당긴다. 빤히 바라봤다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(조금 마른침을 삼킨다. 다시 손이 뻗어져 당신의 발목을 잡아 쭉 당겼다. 슬슬 자신을 그 사이에 두고 약간 몸을 낮췄다.) ...제정신이고 싶어서... (이 대답을 바란 것이 아니라는 걸 알아. 하지만 그리 대답했다. 이어 당신의 다리에 이윽고 제 볼 한쪽이 닿는다. 눈을 빤히 마주하며, 천천히 당겼다. 당신이 조금씩 당겨져 눕게 되도록.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">............ (다리 사이로 붉은 눈동자 한 쌍이 저를 꿰뚫듯 바라보는 모습에 떨리는 숨을 길게 뱉는다. 명백히 긴장하고 있었다. 이런 텐션을 조성하는 데에 누구보다 익숙한 자신이었음에도, 도저히 어떤 반응이 가장 적절할지 머리가 돌아가지 않아서.) 이상해... (고작 뱉는다는 게 이런 솔직한 감상이다. 당신의 머리칼을 쓸어넘겨준다.) 그럼 더 마시지 말고, 내 눈 피하지도 말고... (지금처럼. 그리 말하며 몸을 편하게 시트 위에 늘어트린다. 상체만 살짝 들어 당신을 응시하는 자세로.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...알아. (당신의 손이 닿으면 그 감각을 즐기듯 느릿하게 눈을 감았다가 떠냈다. 볼을 기댔던 얼굴이 조금 더 틀어져, 입술이 허벅지에 닿는다. 몇 번 입을 맞추고, 허연 허벅지에 잇자국을 가볍게 내며 올라갔다. 다리 사이에 제 머리가 있었고, 양손으로 허벅지 밑을 잡아 밀어 올려 제 어깨에 걸치도록 했다.) 빨아줘도 돼? (허락을 하나하나 받는 것은 그다지 섹시하진 않지만, 오늘만은 그러고 싶었다. 온전하게 당신과 소통하며, 비어버린 부분 없이, 장면마다를 기억하고 싶어서.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">으음, ... (기분 좋은 목울림. 맨살이 깨물릴 때마다 마른 허벅지가 짧게 움찔거리곤 했다. 바람 새는 듯한 웃음소리와 함께 끄덕였다. 쌍방 이상한 걸 아는데, 멈출 생각은 없다는 게. 이런 기분은 오랜만이다. 아니. 처음인가. 허벅지 사이에 머리칼이 스치는 감각이 퍽 야하게 느껴져 아래에 그새 심이 선다.) 네. (그리곤 장난스럽게 발끝을 세워 당신의 등을 간지럽힌다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(등줄기에 닿는 감각에 오소소 오싹함이 밀려 올라왔다. 이미 한 번 정사까지 치른 후인데도, 왜 이리 계속 까무룩 정신을 놓고 싶은지 의아했다. 과한 자극에 뇌가 자동적으로 스위치를 끄고 싶어하는 것 같기도 했다.) ... (천천히 입술이 벌려져 당신의 뿌리 부분을 물었다. 얼굴을 묻고, 단단해진 부분을 혀가 쯉- 빨아낸다. 가끔 조금 더 입을 벌려 말캉한 음낭 부분까지도 입안에 담았다. 정신없이 당신의 성기에 키스를 하는 것 같기도 했다. 숨이 빠르게 뜨거워진다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아, (세워 버티던 팔꿈치에 힘이 들어간 탓에 빳빳한 시트가 꾸득 마찰음을 낸다. 마냥 은근하지만은 않은 자극에 저도 모르게 허벅지에 힘이 들어가고 당신의 옆얼굴을 꾹 눌렀다 떼어낸다. 숨이 거칠다. 뜨겁게 흩어진다. 장난스레 당신의 등을 쓸던 발끝 역시 간헐적으로 움츠러들었다. 금방 두툼하게 부푼 좆이 꺼떡거리고, 힘줄이 도드라지기 시작할 즈음에는 점차 초조해진다.) … 형님, (얼른… 재촉하는 목소리가 한숨처럼 터졌다. 제대로 물어줬으면 싶었다. 뜨거운 입안에, 축축한 점막에 비비고 들쑤시고 싶다는 난잡한 상상이 당신의 얼굴 위로 오버랩된다. 낯이 발긋 익는다.) 흐, …</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(아래에서는 외설스러운 소리가 연이어 일었다. 마찰음이 젖어 인다. 이쪽이야말로 급했다. 그다지 남자의 것을 밝힌 적은 없다. 그런데도 불구하고, 당신이 기분 좋아하는 것을 보고 싶어서. 조금 더 느껴줬으면 해서. 당신의 반응에 두껍게 솟아오른 핏줄을 혀가 밀어 누르며 타고 오른다. 매끌거리는 혀에 잔뜩 뜨거운 타액을 머금고, 매끈한 귀두 끝을 물었다. 귀두와 좆기둥 사이의 이음새 부분을 물고 부드럽게 고개를 움직인다. 아직까지는 제법 느긋한 움직임이었다. 허벅지를 밀어 잡은 손가락에 힘이 실려 살결이 조금 눌렸다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(좆끝을 머금고 당신이 움직이기 시작하자 무언가 참아내는 듯 끓는 신음이 목을 울렸다. 체온이 곧대로 전해졌다. 이쪽도 이정도 자극에 이렇게까지 흥분하는 건 드문 일이었다. 그를 자각하고 있었으면서도 떨리는 몸을 제어하기가 힘들다. 허리가 들썩인다.) 조금만 더... (시트를 꽉 쥔다. 무엇보다 가장 자극적인 건 지나치게 선명한 시야에 들어차는 당신의 얼굴이다. 혀끝이, 입술이 저를 물고 움직이는 모습이나 여전히 저를 응시하는 눈이 과하게 야했다.) 뜨거워서, 기분 좋아요. (퍽 솔직한 감상을 뱉으며 골반을 쿡 밀어올린다. 마치 흥분감에 못이겨 어쩔 수 없다는 것처럼. ... 그래도 불손하게 당신 머리채를 잡아채 끝까지 삼키게 하는 것보단 낫잖아.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">읍... (입안에 천천히 밀어 넣으려던 것이, 허리짓에 순간 깊숙이 넘어온다. 그 압박감에 미간을 살짝 구기며 당신을 노려보았다. 얌전히 있으라고. 이리 말하듯 한술 더 떠선 더 깊숙하게 밀어 넣는다. 목구멍 안에 힘을 빼고 삼키자, 얄팍한 틈으로 새는 타액을 가눌 수가 없었다. 두터운 성기를 삼킨 뜨거운 목 안이 움찔거렸고, 숨이 조금 막혀 잠시 쉬면서도 빼지 않는다. 당신의 성기를 머리부터 뿌리 끝까지 삼키고 나면, 입술이 살가죽에 닿을 정도가 된다. 그 상태에서 느긋하게...) .... (당신의 손을 끌어온다. 그리곤 제 머리에 얹었다. 편하게 손을 두려면, 차라리 손잡이가 있는 편이 낫잖아.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">............... (혼날 줄 알았는데. 오히려 더 목구멍을 열어 성기를 온전히 삼켜내는 몸짓에 힘겨운 침음을 흘린다. 달아오른 호흡이 무겁고 축축하게 가라앉는다. 애써 밀어둔 충동을 부추기는 것처럼 제 손을 이끄는 당신에게 책임을 전가하며 머리칼을 쥔다. 손가락 사이로 흩어지는 것들을 꽉 쥐고 살짝 젖힌다. 제 것을 문 입술이, 흐르는 타액이, 무엇보다 그 두 눈이 잘 보이도록.) 형님이 허락한 거니까, ... ... (물론 이렇게까지 멋대로 구는 걸 허락한 건 아닌 것 같지만. 그대로 뒷머리를 붙들어 당겼다. 데일듯 뜨거운 식도 안으로 좆기둥을 꾹 밀어넣는다. 그리곤 느릿하게 들쑤신다. 저도 모르게 뒷머리를 붙든 손에 단단히 힘이 들어간다. 으음, 응... 기분 좋은 비음이 연달아 샌다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(오히려 시선을 피하지 않았다. 뚫어져라 당신을 보던 것이 마주치면, 살짝 물고 있던 좆대가리 끝을 빼낸다.) ...턱 빠질 것 같아. (퉁명스럽게 말하는 것과는 달리, 급히 입을 가볍게 그 끝에 맞추고 다시 물었다. 서둘러 삼키고 싶다는 듯 굴었다. 매끈하고 좁은 식도를 당신의 좆이 밀며 차지하면, 눌린 기도 탓에 &quot;음...&quot;  낮은 신음이 눌려 나온다. 호흡이 막혀 허벅지를 움켜쥔 손끝이 저도 모르게 살짝 움츠러든다. 목구멍을 유린당하다 보면, 저도 모르게 손 한 쪽이 아래로 내려갔다. 그 사이 뻣뻣해진 제 자지 끝에서, 질질 쿠퍼 액이 새는 탓이다. 오른손으로 그것을 틀어막고 엄지를 깔짝인다.) 하...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아, ... (씨발. 욕설이 치밀어 오르려는 걸 간신히 참는다. 당신의 손이 어딜 향하는지, 어떻게 움찔대는지, 충분히 짐작할 수 있을 정도로 눈에 들어와서. 지나치게 음란한 감각에 전율한다. 손가락을 간지럽히는 머리칼을 더 단단히 쥐고 고개를 움직이게 한다. 찌걱거리는 마찰음과 습한 자극에 노골적인 쾌감이 솟구치고 발끝이 곱아든다. 억눌린 신음이 터졌다. 그렇게 몇 번을 목구멍을 짓처올리고 주름잡힌 입안을 긁어대다보면 낯짝에서 여유가 사라지고 사정감이 어느 수준에 달한다.) 윽, ... 룩, 형님. ... ... 안에 싸도 돼요? (허락을 받는 것 치고는 머리채를 붙든 손을 놓지 않았다. 오히려 한계까지 꾸욱 눌러, 허벅지를 조여 빠져나가지 못하게 붙들고 입술을 짓씹는다. 초조할 정도의 열기가 뱃속에서 끓고, 이내 울컥이며 정액을 토해냈다. 식도 깊은 안쪽에 쏟아부었다. 사정을 마친 후에도 놔주지 않고 한참을 움찔거리다 다리에 힘을 풀었다.) 하아...</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(허락을 구하지 않아도 됐다. 목구멍 내부를 들쑤시는 감각에 헛구역질이 나오면서도, 조금 눈가가 젖어서는 당신을 받아들이고 있었다. 다만, 제 머리가 빠져나가지 못하는 것은 예상 외였다. 그 사이에서 벗어나기 위해 약간 힘을 주었다. 숨이 막혀 어지러운 감각이 뇌로 전해져, 그것을 쾌감으로 전환한다. 벌겋게 달아오른 얼굴로 당신의 것을 끝까지 삼킨 채 손을 꾹 쥐어낸다. 더듬거리며 그것이 머리채를 잡아낸 당신의 손을 찾았다. 기어코 그것을 찾아 깍지를 끼웠다.) 윽... (진득하고 뜨겁고, 질척한 것이 제 내부를 채운다. 헐떡이며 천천히 젖은 입술로 좆기둥을 깔끔하게 훑으며 떨어진다. 느릿하게 실이 늘어난다.) 헉... 하아... 너... (손은 여전히 깍지가 끼워져 있다.) ... (천천히 그것을 풀어낸다.) 로완... 나... 아파... (그러니까, 아까부터 만지작대던 것 말이야.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(비로소 무릎을 접어 내리고, 만족스럽게 웃는 얼굴을 감추지 않으며 목에 팔을 감는다. 깍지껴 쥐었던 손이, 단단히 느껴지던 체온이 하나같이 기꺼웠으므로 다시 붙들어 당기는 데에는 망설임이 없다. 타박도, 욕설도, 하다못해 원망스러운 기색조차 없이 저를 받아내준 당신이 못내 사랑스러워서. 탁한 붉은 눈이며 입술이 흥분으로 젖어있는 걸 확인하고 나면 막 사정을 마쳤음에도 금방 다시 저릿한 기분이 된다.) 이건 좀 반칙이지... (양 뺨을 붙든다. 일말의 저항감도 없이 체액으로 번들거리는 입술을 물었다. 진득하게 입맞춘다. 그러는 동안 한 손을 밑으로 내렸다. 단단히 부풀었을 성기를 쥐고, 입술을 떼고, 눈싸움하듯 시선을 고정한 채 당신의 것을 느긋하게 쓸어올린다. 숨결이 아슬아슬한 거리에서 뒤섞인다. 그 상태로 소근거렸다.) 나 엎드릴까?</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">아, 흐.... (혼미한 정신에도 당신의 입술이 닿으면 정신없이 그것을 빨고, 핥아올린다. 정돈된 손톱이 자리한 손가락이 제 좆을 쓸어올리면, 바짝 서있던 것이 껄떡거렸다. 흥분에 흘러나온 것이 기둥을 타고 흘러내려, 음낭까지를 적신다. 당신의 손아귀 안에서 불뚝 올라온 핏줄이 꿈틀였다.) ... (홀린 듯 고개를 끄덕인다. 당신이 자세를 잡는 속도조차를 참지 못해, 어깨를 힘있게 눌러 침대에 엎드리게 했다. 바로금 한 쪽 오금 쪽을 무릎으로 눌러 고정하고는, 콘돔을 가져와 급히 씌운다.) 로... (급하게 당신의 이름을 불렀다. 몸을 숙여 당신의 등에 닿게 한다. 급한 숨이 덥게 쏟아졌다. 양 손으로 당신의 둔부를 벌리고, 다시 닫혀버린 구멍에 스치도록, 사이에 제 자지를 끼워 비비적댄다.) 응...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">... (조금은 당황해줄 줄 알았는데 말이지. 망설임 없이 고개를 끄덕이고 저를 짓누르는 무게감에 가볍게 아랫입술을 씹고 시트에 뺨을 부볐다. 흐트러진 머리칼을 쓸어넘기고, 살짝 시선을 뒤로 해 당신을 바라본다. 잠깐 마주한 얼굴로도 상대가 퍽 다급한 상태라는 것만큼은 더 묻지 않아도 충분히 알 수 있었으므로, 이미 이 시점에서 정서적 만족감은 더할 나위 없이 차오른 상태겠다.) 네. 저 여기 있어요, 룩. (속삭이듯 마주 이름을 부른다. 눈을 휘었다. 곧 한껏 겹쳐지고 맨살 위로 쏟아지는 숨을 느끼며 전율한다. 아직 채 마르지않은 뒷구멍에 미끌거리는 촉감이 닿자 당연한 수순처럼 비음이 샌다.) 하, ... 뭐가 이렇게, 급해요... (웃음기어린 목소리를 뱉고 나면 시트를 제대로 딛고 가슴께를 바닥에 붙이며 둔부를 치켜든다. 당신 앞에서 이런 꼴을 보이는 건 좀 새삼스럽고 민망하기야 했지만, 그래도, 뭐... 오늘 하루 정도야...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">...네가 급하게 만들었잖아... (가쁘게 내뱉는 숨에는 과한 흥분으로 인한 떨림마저 섞여있었다. 멀리 있는 젤을 가져올 생각조차 하지 못한다. 연신 엄지로 아래를 벌려대던 손 중 하나가 올라온다. 제 중지와 약지를 천천히 당신의 입에 밀어 넣는다. 이뻐해주듯 혀를 가볍게 부벼주고는, 타액을 담뿍 뭉글게 훔쳐 모아 빼낸다. 다시금 내려가 당신의 뒷구멍에 그것을 흘려 부벼주었다. 자꾸만 바짝 선 성기가 복부에 바짝 닿을 만큼 올라온다. 눈이 핑핑 돌았다. 술이나 약을 하지 않고 이 정도로 성욕에 차오른 것은 간만이었다. 자꾸만 배에 닿아 질질대는 좆대가리를 잡아 구멍에 맞추고, 쭈욱... 밀어넣는다.) 흑... (우는소리를 왜 제가 내는 것인지. 손에 닿는 살을 움켜쥐고, 뿌리까지 밀어 넣었다. 아랫배가 당기는 기분에 숨을 삼키며, 한 번 떨어낸다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(입가에 손이 닿으면 본능처럼 혀를 내었다. 옅게 신음하며 손가락을 적셨다. 그것이 축축하게 골 사이로 흘러내려 구멍을 젖어들게하면 점차 기대감이 심박을 가속화한다. 몸을 가르고 끝까지 들이차는 무게감에 아흑, 하는 탄성을 터트린다. 어째 아까보다 더 깊이 들어온 것 같은데... ... ... 아직 제대로 움직이지도 않았는데도 열이 치밀어오르고 내장이 뒤집히는 기분이었다.) 하, 허윽. ... 룩... 이거... 후으, 아까보다 더, 깊은 것 같아... (더듬더듬 시트를 쥔 손을 뒤로한다. 나 손 잡아줘요. 웅얼거리며 묵직한 압박감이 주는 쾌감에 바들바들 떨었다. 두번째인데도 적응이 되질 않았다. 이 상태로 제대로 쑤셔박히면 정말로 정신을 놓아버리게 될지도 모르겠다는 예감이 들어서, 저도 모르게 마른침을 삼킨다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(손을 잡아달라는 말은 분명 이런 뜻은 아닐 것이다. 몸을 조금 숙였다. 아까 한참을 쑤셔대 녹진하게 녹은 내벽이 느껴지는 것 같았다. 끈적하고 야릇하게 들러붙는 감각에 허리 쪽이 한 번 흠칫 거린다. 그대로 비비적거리자, 접합부가 피부에 닿을 만큼의 감각이 잠깐 느껴졌다. 아래가 저도 모르게 꺼덕거렸고, 이어 몸을 다시 세워낸다. 손에는 당신의 양 손목이 있다. 그대로 손을 엑스 자로 단단히 겹치고, 오른쪽 의수로 한 번에 움켜쥔다. 등 뒤에 붙이도록 하고는 허리를, 한 번, 쳐올렸다.) 응, 손 잡았어... (그대로 움켜쥔 손에 힘을 준다. 우웅-. 하고 의수에 힘이 들어가는 작은 기계음이 진동처럼 울렸다. 어지간한 힘으로는 빠져나오지 못할 구속을 하고는, 그대로 한계에 달한 좆을 쭉 빼낸다. 그리곤 다시금 푹 밀어 넣는다. 헐떡이는 숨이 연신 낮게 기어 나온다.) 아, 로완... 네 안이... 너무 기분 좋아... 빼기 싫어... (중얼이며.)<br>(점점 그 간극이 짧아진다. 턱, 턱- 하고 박아내는 속도가 빨라지기 시작한다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">아, 룩, 잠시, 만. (그냥 깍지 껴 잡아주기만 하면 됐는데. 이런 식으로 야하게 굴어달라는 게 아니었는데. 꽉 붙들려 움직일수조차 없는 상태가 되면 당황스러운 바르작거림이 이어진다. 곧 단번에 내벽이 짓이겨진다. 몸이 크게 튀었다.) 아, 아흐으, 아아... (손이 움찔거리고, 깊이 박힐 때마다 허벅지가 파드득 벌어진다. 쾌감이 오르는 속도가 전과는 비교할 수조차 없이 빨랐다. 팔로 지탱하지 못해 몸을 가누기가 영 힘들었던 탓에 이리저리 상체가 뒤틀린다.) 룩, ... 룩. 아. 이상해, 잠깐만, 나, ... (뒷목이나 귓가는 물론이고 쇄골께까지 온통 발긋해진 즈음이다. 바르르 경련하는 입술을 물고 눈꼬리를 늘어트린다. 속눈썹이 젖어드는 것 역시 순식간이다. 조금만 천천히... 응? 애원하듯 새는 목소리가 혼곤하다. 어떻게든 손가락을 움직여 의수를 붙들었다. 미약한 기계의 진동이나마 당신의 것인만큼 의지하고 싶었다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(천천히. 라는 말에도 속도를 줄이기가 힘들었다. 오히려 잡은 손목을 쭉- 잡아당겨, 허리를 조금 휘어 올리게 한다. 이어 반대 손으로 침대를 짚고, 연신 당신의 내벽을 잔뜩 즐기기 바쁘다. 바짝 성이 났던 좆을 오물거리며 매끄러이, 기꺼이 삼키는 구멍이 어찌나 이쁘고, 사랑스럽던지.) 응, 로... 나 여기 있어... (당신 이름을 중얼이며 한참을 내부를 힘 있게 찍어대다가, 깊숙한 곳에서 잠시 멈춘다. 빙글거리며 제 자지로 내벽을 휘저어댄다. 몸을 살짝씩 틀어낼 때마다 구멍과 좆 사이에 틈이 조금 생겼다가 사라졌다. 그것에서 눈을 떼지 못한다.) ...로... 괜찮아? 여기? 어디가 좋아... 네 아래는 다 좋다고 하는 것 같긴 한데... (흥분과 웃음기가 섞인 목소리로 다정하게 속삭인다. 천천히 손목을 잡은 손을 놓아준다. 편해진 손이 당신의 둔부와 허벅지를 천천히 쓸어내린다. 한 번 가볍게 쳐내며 몸을 조금 세워 가슴이 당신 등에 닿게 올라온다.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(극점이 찔리고, 내벽이 버겁게 쓸릴 때마다 눈앞이 아득하게 점멸한다. 이미 한차례 달아올랐다 식은 몸인 탓일까. 아니면 그새 당신의 좆질에 예민하게 반응하도록 몸이 적응하기라도 한 걸까. 경련하듯 자꾸만 튀어오르고, 가슴팍이 들썩거렸다. 가뜩이나 달아오른 안이 진득하게 휘저어지면 그때부턴 당황스러울 정도의 쾌감에 울먹이듯 신음하며 바들바들 떨었다. ... 너무 느껴서 힘들다는 감각이 이런 거구나. 다리에 힘이 풀리고 목소리, 숨결 하나조차 제대로 다룰 수가 없었다. 벌어진 입술 사이로 채 갈무리하지 못한 짓무른 흐느낌이 샌다. 아, 모르겠다. 어차피 당신도 제정신은 아닌 것 같으니까, 오늘 하루쯤은 그냥 망가져도 괜찮지 않을까.) 응. 좋아요, ... 거기, 지금, 윽. 형 거... 끝까지 닿아서, 아... (손목이 풀리고 나면 힘없이 녹아내린다. 단단히 구속당했던 탓에 손목에 발갛게 자국이 남은 채다. 한 손은 바닥을 짚고 다른 쪽이 침대 헤드를 붙들었다.<br>마찰음에 이어 축축히 젖은 등에 뜨거운 당신의 가슴팍이 닿으면 빠르게 뛰는 심박이 전해지는 듯한 착각에 몸이 달달 떨린다. 머리칼이 마구잡이로 흐트러진다. 시트를 한껏 구기는 손끝이 하얗게 질린다. 이어 어쩔 줄 몰라하는 목소리가 작게 샌다. 형.) 나, 하아. 표정관리를, 잘 못하겠, 흐윽... (그 말대로, 땀과 눈물로 범벅된 얼굴이 엉망으로 일그러진다. 낯을 보여주고 싶지 않은지 고개를 푹 숙인 채다. 제 성기를 더듬더듬 쥐어 흔드는 손길이 점차 다급해진다. 더 이상해지기 전에 얼른...)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(들러붙는 내벽을 음미하듯 허리를 돌려댄다. 느끼는 부위가 눌려지도록 조금 더 자리를 잡는다. 당신의 위를 온전히 차지한 상태로 닿는 살갗이 뜨겁다. 당연스럽게도, 마찬가지로 심장이 터질 듯 뛰고 있다. 그 박동감이 심해, 목덜미에 솟은 핏줄이 움찔거릴 정도다. 한 쪽 손이 당신의 턱을 잡는다. 옆으로 당겨 눈을 마주치면, 몰두하여 다른 것은 보지도 못하는 멍한 눈이 마주쳤다.) ... (숨을 한 번 몰아쉰다. 눈물이 고인 그 벽안을 마주친 것만으로도 사정감이 밀려올 정도로 흥분한다. 당신이 품고 있는 것의 끝이 꺼덕거리며 안을 살살 자극했다. 마른 침을 한 번 삼킨다. 씨발, 섹스 한두 번 해? 게다가 성적으로 문제가 있는 것도 아닌데. 왜 이렇게 죽을 맛인지. 저도 모르게 입을 두어 번 맞춘다. 이마를 툭 맞대고 놔주더만, 그 손으로 당신이 아래를 흔드는 손을 잡아 깍지를 껴 아래에 고정해버렸다.) 그냥, 참지 말아줘. 제발...<br>(빌듯 말하는 것과 달리 허리가 짐승들 교미하는 것마냥 움직여댄다. 젖어 찔꺽거리는 소리와, 살갗이 탁, 탁 부딪치는 소리가 연신 이어 났다. 드러난 허연 어깨에 이빨을 박고, 마찬가지로 몰려오는 사정감에 끙끙거리는 신음을 흘린다.) 하... 으흐, 음... (당신의 귓가에 칭얼이듯 흘리며, 제가 당신의 성기를 자연스럽게 잡아낸다. 두툼하게 서있는 성기의 기둥을 부드럽게 쓸어내리면 제 허리가 깊숙히 들어가고, 표피를 쓸어올리면 제 허리가 살짝 빠져나갔다.) 내 이름 불러줘... (저릿하다. 제 아랫배도, 얽어진 손가락도, 하물며 정신머리까지도. 온전히 당신에게 빠진다. 이 순간만큼은.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(자극받은 내벽이 조금씩 부어오른 탓에, 당신의 좆을 빨아들이는 것처럼 엉겨붙었다. 단순히 극점이 압박당하는 게 아니라 한껏 짓눌린 채 비벼지니 절로 동작이 뚝뚝 끊기며 쾌감에 절어 파득거리게 된다. 혀를 내어 정신없이 입술을 물고 빨았다. 채 갈무리하지 못한 타액이 흐르고, 땀이 방울져 떨어졌다. 이렇게 제정신이 아닌데, 분명 완전 망가져 있을텐데, 참지 말아달라니.) 아, 안돼... 안 예쁘단, 흑, ... (말을 채 마치지도 못하고 다급하게 숨을 들이킨다. 사정없이 안을 짓처올리는 거센 허릿짓에, 어쩔 줄 모르며 한손으로 침대 헤드를 꽉 붙들고 견딘다. 프레임이 삐그덕댔다. 오르가즘이 연달아 찾아든 탓에 고개가 젖혀졌다가, 다시금 푹 떨구어졌다가, 그걸 몇 번이나 반복한다. 이제는 온몸이 새빨갛다. 하얗게 표백된 정신과는 대조적으로. 이제 신음성은 완전히 젖어들었다. 달게 짓무르고, 축축하게 샌다. 그 목소리로 연이어 몇번이고 당신을 불렀다.)<br>룩, 룩... ... 좋아. (이거어, 기분 너무, ... 허리를 달싹거리며 제 것을 잡아쥔 손아귀가 자위기구라도 된 것마냥 치댔다. 진작 줄줄 새던 프리컴이 손을 흥건히 적신다. 동공이 풀리고 눈이 반쯤 감겼다. 그러다보면 어느 순간 초조할 정도의 사정감이 차올랐다.) 잠깐, 자기야, 나, 나 못 참겠, 흣. (두서없이 아무렇게나 뱉는다. 아득한 절정이 불시에 찾아들어 더 예고할 겨를조차 없이 좆끝에서 정액이 터졌다. 몇차례나 울컥대며 뱉어지고 나면 지친 몸에 힘이 풀린다. 그렇게, 그대로, 무너져내렸다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">(열에 가득 찬 목소리가 고막을 파고든다. 단정한 목소리가 달달 떨며 제 이름을 부른다. 제 좆을 좋아라 삼키는 사랑스러운 것에 몇 번이고 틀어박고, 쑤셔 박아, 당신의 안에 질척하게 싸지르고 싶은 것을 참아 삼킨다.) 로... 너무 조이지 마... 나 자지 터지면 책임질래? 응? (농조로 뱉는 것조차, 마주 흥분에 그득 차 욕망에 젖은 상태로 흘러나온다. 당신의 허리가 젖혀지면 순간적으로 끈적하게 조여지는 것을 느낀다. 그 순간을 놓치지 않고 푹, 추삽질을 했다. 접합부에서부터 흥건하게 액체가 흘러내려, 당신의 음낭을 타고 내려간다. 허벅지에 묻은 것이 뭉개져 매끌거린다. 조금만 더, 조금만 더... 들이치는 사정감이 못내 서운하다. 당신을 조금 더 느끼고 싶은 마음이 그득하다. 견디고 참다가, 참을 수 없는 순간이 밀려오면,) 윽... (터지듯 신음이 흘러나온다. 깍지를 꽉 낀 상태로, 당신의 성기를 흔들어주던 손으로 허벅지를 당겨 안고. 깊숙한 곳에 사정했다.<br>처음와 별다르지 않은 양이 밀려나왔다. 몇 번이고 몸이 떨렸다. 숨을 색색 고르며 당신의 등에 이마를 기댄다. 눈 앞이 과할 정도로 아찔했다.) 아... 씹... ...하... (당신이 무너져내리면 자연스럽게 제 좆이 빠져나간다. 잔뜩 젖은 콘돔이 헐렁였다. 그대로 당신을 덮어내듯 올라가 드러난 귀를 연신 잘근거린다.) 자기? 그래. 자기야... (낄낄거리며 속삭인다.) 나 조금 더 해도 돼...? 내가 알아서 할게...</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+                  <div class="message received">
+                    <img src="https://infisector8.co.kr/system/accounts/avatars/114/555/084/275/157/468/original/aef6a32f88f5d580.png" alt="프로필" class="profile-img"><div class="bubble">(한껏 예민해진 몸은 옅은 자극에도 크게 반응했다. 귀를 씹히면 움찔대며 연신 고개를 비틀었고, 끈적하게 젖은 살결이 문질러지면 저도 모르게 신음을 터트리는 식이었다. 속삭여지는 다정한 목소리에 전율하며, 젖은 이마를 시트에 부벼 닦는다.) 이렇게 집요한 줄 알았으면 하자고 안 했어요... (그러면서도 한숨쉬듯 웃는다. 조금만 쉬고, 응? 그리 소근대며 몸을 돌렸다. 곧 그게 당연한 양 품에 안긴다. 따끈한 숨을 몰아 뱉으며 한참을 그렇게 기대고 있었다. 이후에 이어질 행위들에도 가끔 버거워하기야 했겠으나, 싫다는 말을 뱉는다거나 당신을 밀어내는 일은 없었을 것이다.)</div>
+                  </div>
+                
+                  <div class="message sent">
+                    <div class="bubble">다 받아줄 것처럼 굴었잖아... (드물게 칭얼거리듯 중얼였을 것이다.) 내가 말했잖아. ...지칠 때까지 키스하고, 섹스하고, 끌어안는 거 좋아한다고... (아마 한 번만 더. 조금만 더. 뻔하고 수두룩한 말들이 밤새 내내 나왔을 것이다. 중간중간 마른 목을 축이기 위해, 결국 침대 옆으로 가져온 생수병을 땄을 것이다. 또 그 사이 미지근한 물을 머금고 입을 맞췄을 것이다. 밤새 내 깍지 껴진 손이 저릴 것이고, 흔들린 몸이 뻐근했으며,  밝은 빛이 어렴풋 들어올 때에야 내내 괴롭히던 당신을 품에 끌어안고 그제야 두어시간을 잤을 것이다. 너무나 당연스러운 수순처럼.)</div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                  </div>
+                
+              </div>
+  <!-- ✅ 프로필 이미지 링크 일괄 교체 -->
+  <script>
+    const SENT_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcv3pKW%2FdJMcafk7mpw%2FAAAAAAAAAAAAAAAAAAAAAEhRZdGEwGQzVfd5vR28e5qpOjc9ShXXDF2gdmr_dedg%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3Def4EF26d7Y0%252FjwwjoclHYDqOlu4%253D";
+
+    const RECEIVED_AVATAR =
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbCZHC0%2FdJMcahQLFa1%2FAAAAAAAAAAAAAAAAAAAAAPBQADcm_To6MD4_5BfgK7VHVO0qXEvPn1vHqKFTRya4%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3D4%252FFLZVKFZWeDt3Lr83%252FL1wNXehA%253D";
+
+    document.querySelectorAll(".message.sent .profile-img").forEach(img => {
+      img.src = SENT_AVATAR;
+    });
+
+    document.querySelectorAll(".message.received .profile-img").forEach(img => {
+      img.src = RECEIVED_AVATAR;
+    });
+  </script>
+            </body>
+            </html>
