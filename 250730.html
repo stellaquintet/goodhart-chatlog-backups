@@ -86,7 +86,7 @@
               <div class="chat-container">
                 
                   <div class="message sent">
-                    <div class="bubble">(누구나 ‘한 때’는 있는 법이다.)<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbFuOlk%2FdJMcah33BuY%2FAAAAAAAAAAAAAAAAAAAAAKnv_MKqiAQMRBO1OG5CiyStV1fjowFlR1UuFltF5PfR%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DnK1gz8N4G%252FN5o8GPFbakQsn4y4M%253D"></div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
+                    <div class="bubble">(누구나 ‘한 때’는 있는 법이다.)<img src="assets/img/250730.jpg"></div><img src="https://infisector8.co.kr/system/accounts/avatars/114/288/212/103/365/227/original/a4f630ac1d3568fe.png" alt="프로필" class="profile-img">
                   </div>
                 
                   <div class="message received">
@@ -184,12 +184,9 @@
               </div>
   <!-- ✅ 프로필 이미지 링크 일괄 교체 -->
   <script>
-    const SENT_AVATAR =
-      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcr0uKr%2FdJMcafk7hYx%2FAAAAAAAAAAAAAAAAAAAAAGom9N_n6GsTRwFIXjXCySrdxm5gXQiog1z2-oAqJLFi%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DlI1KW6nIUQbSmls8gex165Pe%252FD4%253D";
-
-    const RECEIVED_AVATAR =
-      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F4coyc%2FdJMcabpub1E%2FAAAAAAAAAAAAAAAAAAAAAFsonraF8TxdzLPDQhiYvColK29rjXHkrmIuQrODYdFo%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DjNGLhIMXbWZWQpPfUk6BcpKQSTA%253D";
-
+    const SENT_AVATAR = "assets/img/L2.jpg";
+    const RECEIVED_AVATAR = "assets/img/R2.png";
+                
     document.querySelectorAll(".message.sent .profile-img").forEach(img => {
       img.src = SENT_AVATAR;
     });
