@@ -255,12 +255,9 @@
               </div>
   <!-- ✅ 프로필 이미지 링크 일괄 교체 -->
   <script>
-    const SENT_AVATAR =
-      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F4coyc%2FdJMcabpub1E%2FAAAAAAAAAAAAAAAAAAAAAFsonraF8TxdzLPDQhiYvColK29rjXHkrmIuQrODYdFo%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DjNGLhIMXbWZWQpPfUk6BcpKQSTA%253D";
-
-    const RECEIVED_AVATAR =
-      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcr0uKr%2FdJMcafk7hYx%2FAAAAAAAAAAAAAAAAAAAAAGom9N_n6GsTRwFIXjXCySrdxm5gXQiog1z2-oAqJLFi%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1769871599%26allow_ip%3D%26allow_referer%3D%26signature%3DlI1KW6nIUQbSmls8gex165Pe%252FD4%253D";
-
+    const SENT_AVATAR = "assets/img/R2.png";
+    const RECEIVED_AVATAR = "assets/img/L2.jpg";
+                
     document.querySelectorAll(".message.sent .profile-img").forEach(img => {
       img.src = SENT_AVATAR;
     });
